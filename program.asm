@@ -10,7 +10,8 @@ inc length
 inc length
 inc length
 inc length
-
+nop
+nop
 
 // set up bitonic sort param
 ldi low_param,  0
