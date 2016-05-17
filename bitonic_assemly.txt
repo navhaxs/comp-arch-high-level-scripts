@@ -1,0 +1,184 @@
+// direction: UP = 1, DOWN = 0
+.dseg
+.equ size = 8
+data: .byte size
+tag: .byte size
+
+.cseg
+
+start:
+
+   ldi XL, low(data)
+   ldi XH, high(data)
+
+   ldi YL, low(tag)
+   ldi YH, high(tag)
+
+   //LOAD DATA VALUE
+   //LOAD TAG VALUE   
+
+   ldi  low_param, 0
+   ldi  high_param, 7
+   ldi  dir_param, 1
+   rcall bitonicSort
+
+end:
+   jmp end
+
+bitonicSort:
+    
+   push high
+   push low
+   push dir
+   push midpoint
+   push length
+   push cmp
+   
+   add low, low_param, r0
+   add high, high_param, r0
+   add dir, dir_param, r0
+
+   ldi length, r0
+   sub length, high, low
+   inc length
+   
+   ldi midpoint, r0
+   add midpoint, low, high
+   rshift midpoint
+   inc midpoint
+   
+   slt cmp, r1, length
+   beq cmp, r0, bitonicSort_end
+
+   add low_param, low, r0
+   sub high_param, midpoint, r1
+   ldi dir_param, r1 
+   rcall bitonicSort
+
+   add low_param, midpoint, r0
+   add high_param, high, r0
+   ldi dir_param, r0
+   rcall bitonicSort
+
+   add low_param, low, r0
+   add high_param, high, r0
+   add dir_param, dir, r0
+   rcall bitonicMerge
+
+   bitonicSort_end:
+	pop cmp
+	pop length
+	pop midpoint
+	pop dir
+	pop low
+	pop high
+	ret 
+
+
+bitonicMerge:
+
+   push high
+   push low
+   push dir
+   push midpoint
+   push length
+
+   add low, low_param, r0
+   add high, high_param, r0
+   add dir, dir_param, r0
+
+   ldi length, r0
+   sub length, high, low
+   inc length
+   
+   ldi midpoint, r0
+   add midpoint, low, high
+   rshift midpoint
+   inc midpoint
+
+   beq lenght, r1, bitonicMerge_end
+   
+   add low_param, low, r0
+   add high_param, high, r0
+   add dir_param, dir, r0
+   rcall bitonicCompare
+
+   add low_param, low, r0
+   sub high_param, midpoint, r1
+   add dir_param, dir, r0
+   rcall bitonicMerge
+
+   add low_param, midpoint, r0
+   add high_param, high, r0
+   add dir_param, dir, r0
+   rcall bitonicMerge
+
+   bitonicMerge_end:
+	pop length
+	pop midpoint
+	pop dir
+	pop low
+	pop high
+	ret 
+
+bitonicCompare:
+   
+   push high
+   push low
+   push dir
+   push dist
+   push cmp
+   push i
+
+   add low, low_param, r0
+   add high, high_param, r0
+   add dir, dir_param, r0
+
+   ldi length, r0
+   sub length, high, low
+   inc length
+
+   add dist, length, r0
+   rshift dist
+
+   //BEGIN LOOP
+   add i, low, r0
+   bitonicCompare_loop:
+
+	ld tag_i, X, i
+	ld tag_idist, X, i+dist
+
+	
+	slt cmp, tag_i, tag_idist
+	bne cmp, dir, bitonicCompare_loop_end
+
+	st tag_i, X, i+dist
+	st tag_idist, X, i
+
+	ld tag_i(data), X, i
+	ld tag_idist(data), X, i+dist
+
+	st tag_i(data), X, i+dist
+	st tag_idist(data), X, i
+	
+   bitonicCompare_loop_end:
+	inc i
+	add high(tmp), low, dist
+	slt cmp, i, high(tmp)
+	beq cmp, r1, bitonicCompare_loop
+	
+   bitonicCompare_end:
+	pop i	
+	pop cmp
+	pop dist
+	pop dir
+	pop low
+	pop high
+	ret
+	
+	
+	
+   
+
+  
+

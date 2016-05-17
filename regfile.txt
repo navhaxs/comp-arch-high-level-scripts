@@ -1,0 +1,16 @@
+r0
+r1
+cmp
+dir
+dir_param
+dist
+high
+high_param
+i
+length
+low
+low_param
+midpoint
+tag_i
+tag_idist
+tmp
