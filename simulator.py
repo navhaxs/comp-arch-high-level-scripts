@@ -65,10 +65,10 @@ while 0 <= pc < 256:
 
     elif (opcode == "1") or (opcode == "2"):
 
-        offset_reg = hex2int(insn[1])
+        offset_reg = hex2int(insn[2])
         offset_val = hex2int(regfile[offset_reg])
 
-        rt_reg = hex2int(insn[2])
+        rt_reg = hex2int(insn[1])
         memory_base_addr = 0
         # memory_base_addr = hex2int(insn[3])
 
