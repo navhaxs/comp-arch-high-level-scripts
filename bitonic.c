@@ -29,22 +29,22 @@ int main(int argc, char * argv[]) {
     //     data[i] = rand() % 50;
     // }
 
-    tag[0] = 8
-    tag[1] = 3
-    tag[2] = 6
-    tag[3] = 4
-    tag[4] = 4
-    tag[5] = 3
-    tag[6] = 9
-    tag[7] = 7
-    data[0] = 8
-    data[1] = 3
-    data[2] = 6
-    data[3] = 4
-    data[4] = 4
-    data[5] = 3
-    data[6] = 9
-    data[7] = 7
+    tag[0] = 8;
+    tag[1] = 3;
+    tag[2] = 6;
+    tag[3] = 4;
+    tag[4] = 4;
+    tag[5] = 3;;
+    tag[6] = 9;
+    tag[7] = 7;
+    data[0] = 8;
+    data[1] = 3;
+    data[2] = 6;
+    data[3] = 4;
+    data[4] = 4;
+    data[5] = 3;
+    data[6] = 9;;
+    data[7] = 7;
 
 
     printf("%s\n", "Input\n");

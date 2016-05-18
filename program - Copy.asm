@@ -44,7 +44,7 @@ bitonicSort:
 
 	// else,
 
-        // calculate midpoint
+	// calculate midpoint
 	add midpoint, low, high
 	rshift midpoint
 	inc midpoint
@@ -64,7 +64,7 @@ bitonicSort:
 	rcall @bitonicSort
 
 	// call
-        //        bitonicMerge(direction, low, high);
+	//        bitonicMerge(direction, low, high);
 	add low_param, low, r0
 	add high_param, high, r0
 	add dir_param, dir, r0
@@ -182,18 +182,18 @@ bitonicCompare_loop_end:
 
 	inc i
 
-        // Condition: i < low+dist
+	// Condition: i < low+dist
 	// Condition true: 1 => continue loop
 	// Condition false: 0 => break loop
-        //
+	//
 	// add tmp, low, dist
 	// slt cmp, tmp, i
 	// beq cmp, r1, @bitonicCompare_loop
 
-        // We cannot jump backwards using bne/beq as above,
-        // so alternative implementation:
+	// We cannot jump backwards using bne/beq as above,
+	// so alternative implementation:
 
-        add tmp, low, dist
+	add tmp, low, dist
 	slt cmp, tmp, i
 	beq cmp, r0, @bitonicCompare_end
 	jmp @bitonicCompare_loop
