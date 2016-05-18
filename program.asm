@@ -9,7 +9,7 @@
 start:
 	// set up bitonic sort param
 	ldi low_param,  0
-	ldi high_param, 7 // N-1 elements
+	ldi high_param, 15 // N-1 elements
 	ldi dir_param,  1
 	// do call
 	rcall @bitonicSort
