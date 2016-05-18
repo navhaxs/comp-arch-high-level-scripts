@@ -4,12 +4,12 @@
 // program.asm
 //
 // dir_param: UP = 1
-//	          DOWN = 0
+//	      DOWN = 0
 
 start:
 	// set up bitonic sort param
 	ldi low_param,  0
-	ldi high_param, 7// N-1 elements
+	ldi high_param, 7 // N-1 elements
 	ldi dir_param,  1
 	// do call
 	rcall @bitonicSort
@@ -23,8 +23,6 @@ bitonicSort:
 	push low
 	push dir
 	push midpoint
-	//push length
-	//push cmp
 
 	// copy paramters to local variables
 	add low, low_param, r0
@@ -46,7 +44,7 @@ bitonicSort:
 
 	// else,
 
-    // calculate midpoint
+        // calculate midpoint
 	add midpoint, low, high
 	rshift midpoint
 	inc midpoint
@@ -66,15 +64,13 @@ bitonicSort:
 	rcall @bitonicSort
 
 	// call
-    //        bitonicMerge(direction, low, high);
+        //        bitonicMerge(direction, low, high);
 	add low_param, low, r0
 	add high_param, high, r0
 	add dir_param, dir, r0
 	rcall @bitonicMerge
 
 bitonicSort_end:
-	//pop cmp
-	//pop length
 	pop midpoint
 	pop dir
 	pop low
@@ -83,12 +79,10 @@ bitonicSort_end:
 
 
 bitonicMerge:
-
 	push high
 	push low
 	push dir
 	push midpoint
-	//push length
 
 	// load function param --> local
 	add low, low_param, r0
@@ -128,7 +122,6 @@ bitonicMerge:
 	rcall @bitonicMerge
 
 bitonicMerge_end:
-	//pop length
 	pop midpoint
 	pop dir
 	pop low
@@ -139,9 +132,6 @@ bitonicCompare:
 	push high
 	push low
 	push dir
-	//push dist
-	//push cmp
-	//push i
 
 	// load param --> local
 	add low, low_param, r0
@@ -192,26 +182,23 @@ bitonicCompare_loop_end:
 
 	inc i
 
-    // Condition: i < low+dist
+        // Condition: i < low+dist
 	// Condition true: 1 => continue loop
 	// Condition false: 0 => break loop
-    //
+        //
 	// add tmp, low, dist
 	// slt cmp, tmp, i
 	// beq cmp, r1, @bitonicCompare_loop
 
-    // We cannot jump backwards using bne/beq as above,
-    // so alternative implementation:
+        // We cannot jump backwards using bne/beq as above,
+        // so alternative implementation:
 
-    add tmp, low, dist
+        add tmp, low, dist
 	slt cmp, tmp, i
 	beq cmp, r0, @bitonicCompare_end
 	jmp @bitonicCompare_loop
 
 bitonicCompare_end:
-	//pop i	
-	//pop cmp
-	//pop dist
 	pop dir
 	pop low
 	pop high
