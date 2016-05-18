@@ -9,7 +9,7 @@
 start:
 	// set up bitonic sort param
 	ldi low_param,  0
-	ldi high_param, 127 // N-1 elements
+	ldi high_param, 7 // N-1 elements
 	ldi dir_param,  1
 	// do call
 	rcall @bitonicSort
@@ -44,7 +44,7 @@ bitonicSort:
 
 	// else,
 
-        // calculate midpoint
+  	// calculate midpoint
 	add midpoint, low, high
 	rshift midpoint
 	inc midpoint
@@ -64,7 +64,7 @@ bitonicSort:
 	rcall @bitonicSort
 
 	// call
-        //        bitonicMerge(direction, low, high);
+	//        bitonicMerge(direction, low, high);
 	add low_param, low, r0
 	add high_param, high, r0
 	add dir_param, dir, r0
