@@ -164,13 +164,13 @@ bitonicCompare:
 bitonicCompare_loop:
 
 	// load mem[i] to $tag_i
-	ld i, tag_i, 1
+	ld tag_i, i, 1
 	
 	// load mem[i+dist] to $tag_idist
 	// where $cmp = i+dist
 	// $cmp is some unused register
 	add cmp, i, dist
-	ld cmp, tag_idist, 0
+	ld tag_idist, cmp, 0
 	
 	// Condition: tag[i+dist] < tag[i]
 	// Condition true: '1'
@@ -185,8 +185,8 @@ bitonicCompare_loop:
 	// where $cmp = i+dist
 	// $cmp is some unused register
 	add cmp, i, dist
-	st cmp, tag_i, 1 // Save $tag_i to mem[i+dist]
-	st i, tag_idist, 0  // Save tag_idist to mem[i]
+	st tag_i, cmp, 1 // Save $tag_i to mem[i+dist]
+	st tag_idist, i, 0  // Save tag_idist to mem[i]
 
 bitonicCompare_loop_end:
 

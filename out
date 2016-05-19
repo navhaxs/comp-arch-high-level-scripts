@@ -1,0 +1,1901 @@
+['0A00', '0010', '0020', '0003', '0004', '009B', '000A', '0004', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', 0]
+
+tick: 0    pc: 0    sp: 255  >> ldi $r11 <= 0x00 (val: 0)
+tick: 1    pc: 1    sp: 255  >> ldi $r7 <= 0x07 (val: 7)
+tick: 2    pc: 2    sp: 255  >> ldi $r4 <= 0x01 (val: 1)
+tick: 3    pc: 3    sp: 255  >> rcall to @5 [low_param:0 high_param:7]
+tick: 4    pc: 5    sp: 254  >> Pushed 0
+tick: 5    pc: 6    sp: 253  >> Pushed 0
+tick: 6    pc: 7    sp: 252  >> Pushed 0
+tick: 7    pc: 8    sp: 251  >> Pushed 0
+tick: 8    pc: 9    sp: 250  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 9    pc: 10   sp: 250  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 10   pc: 11   sp: 250  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 11   pc: 12   sp: 250  >> sub $r9 7 <= $r6 7 - $r10 0
+tick: 12   pc: 13   sp: 250  >> add $r9 8 <= $r9 7 + $r1 1
+tick: 13   pc: 14   sp: 250  >> sub $r9 7 <= $r9 8 - $r1 1
+tick: 14   pc: 15   sp: 250  >> 7 < 1 is False. $r2 <= 0
+tick: 15   pc: 16   sp: 250  >> False <= 0 eq 1; beq, not jumping
+tick: 16   pc: 17   sp: 250  >> add $r12 7 <= $r10 0 + $r6 7
+tick: 17   pc: 18   sp: 250  >> 3 <= 7/2
+tick: 18   pc: 19   sp: 250  >> add $r12 4 <= $r12 3 + $r1 1
+tick: 19   pc: 20   sp: 250  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 20   pc: 21   sp: 250  >> sub $r7 3 <= $r12 4 - $r1 1
+tick: 21   pc: 22   sp: 250  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 22   pc: 23   sp: 250  >> rcall to @5 [low_param:0 high_param:3]
+tick: 23   pc: 5    sp: 249  >> Pushed 7
+tick: 24   pc: 6    sp: 248  >> Pushed 0
+tick: 25   pc: 7    sp: 247  >> Pushed 1
+tick: 26   pc: 8    sp: 246  >> Pushed 4
+tick: 27   pc: 9    sp: 245  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 28   pc: 10   sp: 245  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 29   pc: 11   sp: 245  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 30   pc: 12   sp: 245  >> sub $r9 3 <= $r6 3 - $r10 0
+tick: 31   pc: 13   sp: 245  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 32   pc: 14   sp: 245  >> sub $r9 3 <= $r9 4 - $r1 1
+tick: 33   pc: 15   sp: 245  >> 3 < 1 is False. $r2 <= 0
+tick: 34   pc: 16   sp: 245  >> False <= 0 eq 1; beq, not jumping
+tick: 35   pc: 17   sp: 245  >> add $r12 3 <= $r10 0 + $r6 3
+tick: 36   pc: 18   sp: 245  >> 1 <= 3/2
+tick: 37   pc: 19   sp: 245  >> add $r12 2 <= $r12 1 + $r1 1
+tick: 38   pc: 20   sp: 245  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 39   pc: 21   sp: 245  >> sub $r7 1 <= $r12 2 - $r1 1
+tick: 40   pc: 22   sp: 245  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 41   pc: 23   sp: 245  >> rcall to @5 [low_param:0 high_param:1]
+tick: 42   pc: 5    sp: 244  >> Pushed 3
+tick: 43   pc: 6    sp: 243  >> Pushed 0
+tick: 44   pc: 7    sp: 242  >> Pushed 1
+tick: 45   pc: 8    sp: 241  >> Pushed 2
+tick: 46   pc: 9    sp: 240  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 47   pc: 10   sp: 240  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 48   pc: 11   sp: 240  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 49   pc: 12   sp: 240  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 50   pc: 13   sp: 240  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 51   pc: 14   sp: 240  >> sub $r9 1 <= $r9 2 - $r1 1
+tick: 52   pc: 15   sp: 240  >> 1 < 1 is False. $r2 <= 0
+tick: 53   pc: 16   sp: 240  >> False <= 0 eq 1; beq, not jumping
+tick: 54   pc: 17   sp: 240  >> add $r12 1 <= $r10 0 + $r6 1
+tick: 55   pc: 18   sp: 240  >> 0 <= 1/2
+tick: 56   pc: 19   sp: 240  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 57   pc: 20   sp: 240  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 58   pc: 21   sp: 240  >> sub $r7 0 <= $r12 1 - $r1 1
+tick: 59   pc: 22   sp: 240  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 60   pc: 23   sp: 240  >> rcall to @5 [low_param:0 high_param:0]
+tick: 61   pc: 5    sp: 239  >> Pushed 1
+tick: 62   pc: 6    sp: 238  >> Pushed 0
+tick: 63   pc: 7    sp: 237  >> Pushed 1
+tick: 64   pc: 8    sp: 236  >> Pushed 1
+tick: 65   pc: 9    sp: 235  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 66   pc: 10   sp: 235  >> add $r6 0 <= $r7 0 + $r0 0
+tick: 67   pc: 11   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 68   pc: 12   sp: 235  >> sub $r9 0 <= $r6 0 - $r10 0
+tick: 69   pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 70   pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 71   pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 72   pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 73   pc: 32   sp: 235  >> Popped 1
+tick: 74   pc: 33   sp: 236  >> Popped 1
+tick: 75   pc: 34   sp: 237  >> Popped 0
+tick: 76   pc: 35   sp: 238  >> Popped 1
+tick: 77   pc: 36   sp: 239  >> sp is currently: 18
+ret to @24
+tick: 78   pc: 24   sp: 240  >> add $r11 1 <= $r12 1 + $r0 0
+tick: 79   pc: 25   sp: 240  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 80   pc: 26   sp: 240  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 81   pc: 27   sp: 240  >> rcall to @5 [low_param:1 high_param:1]
+tick: 82   pc: 5    sp: 239  >> Pushed 1
+tick: 83   pc: 6    sp: 238  >> Pushed 0
+tick: 84   pc: 7    sp: 237  >> Pushed 1
+tick: 85   pc: 8    sp: 236  >> Pushed 1
+tick: 86   pc: 9    sp: 235  >> add $r10 1 <= $r11 1 + $r0 0
+tick: 87   pc: 10   sp: 235  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 88   pc: 11   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 89   pc: 12   sp: 235  >> sub $r9 0 <= $r6 1 - $r10 1
+tick: 90   pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 91   pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 92   pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 93   pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 94   pc: 32   sp: 235  >> Popped 1
+tick: 95   pc: 33   sp: 236  >> Popped 1
+tick: 96   pc: 34   sp: 237  >> Popped 0
+tick: 97   pc: 35   sp: 238  >> Popped 1
+tick: 98   pc: 36   sp: 239  >> sp is currently: 1c
+ret to @28
+tick: 99   pc: 28   sp: 240  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 100  pc: 29   sp: 240  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 101  pc: 30   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 102  pc: 31   sp: 240  >> rcall to @37 [low_param:0 high_param:1]
+tick: 103  pc: 37   sp: 239  >> Pushed 1
+tick: 104  pc: 38   sp: 238  >> Pushed 0
+tick: 105  pc: 39   sp: 237  >> Pushed 1
+tick: 106  pc: 40   sp: 236  >> Pushed 1
+tick: 107  pc: 41   sp: 235  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 108  pc: 42   sp: 235  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 109  pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 110  pc: 44   sp: 235  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 111  pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 112  pc: 46   sp: 235  >> add $r12 1 <= $r10 0 + $r6 1
+tick: 113  pc: 47   sp: 235  >> 0 <= 1/2
+tick: 114  pc: 48   sp: 235  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 115  pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 116  pc: 50   sp: 235  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 117  pc: 51   sp: 235  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 118  pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 119  pc: 53   sp: 235  >> rcall to @67 [low_param:0 high_param:1]
+tick: 120  pc: 67   sp: 234  >> Pushed 1
+tick: 121  pc: 68   sp: 233  >> Pushed 0
+tick: 122  pc: 69   sp: 232  >> Pushed 1
+tick: 123  pc: 70   sp: 231  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 124  pc: 71   sp: 231  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 125  pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 126  pc: 73   sp: 231  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 127  pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 128  pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 129  pc: 76   sp: 231  >> 1 <= 2/2
+tick: 130  pc: 77   sp: 231  >> add $r8 0 <= $r10 0 + $r0 0
+tick: 131  pc: 78   sp: 231  >> ld $r13 <= mem(0)
+tick: 132  pc: 79   sp: 231  >> add $r2 1 <= $r8 0 + $r5 1
+tick: 133  pc: 80   sp: 231  >> ld $r14 <= mem(1)
+tick: 134  pc: 81   sp: 231  >> 16 < 2560 is True. $r2 <= 1
+tick: 135  pc: 82   sp: 231  >> True <= 1 eq 1; bne, not jumping
+tick: 136  pc: 83   sp: 231  >> add $r2 1 <= $r8 0 + $r5 1
+tick: 137  pc: 84   sp: 231  >> st mem(1) <= $r13
+tick: 138  pc: 85   sp: 231  >> st mem(0) <= $r14
+tick: 139  pc: 86   sp: 231  >> add $r8 1 <= $r8 0 + $r1 1
+tick: 140  pc: 87   sp: 231  >> add $r15 1 <= $r10 0 + $r5 1
+tick: 141  pc: 88   sp: 231  >> 1 < 1 is False. $r2 <= 0
+tick: 142  pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 143  pc: 91   sp: 231  >> Popped 1
+tick: 144  pc: 92   sp: 232  >> Popped 0
+tick: 145  pc: 93   sp: 233  >> Popped 1
+tick: 146  pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 147  pc: 54   sp: 235  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 148  pc: 55   sp: 235  >> sub $r7 0 <= $r12 1 - $r1 1
+tick: 149  pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 150  pc: 57   sp: 235  >> rcall to @37 [low_param:0 high_param:0]
+tick: 151  pc: 37   sp: 234  >> Pushed 1
+tick: 152  pc: 38   sp: 233  >> Pushed 0
+tick: 153  pc: 39   sp: 232  >> Pushed 1
+tick: 154  pc: 40   sp: 231  >> Pushed 1
+tick: 155  pc: 41   sp: 230  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 156  pc: 42   sp: 230  >> add $r6 0 <= $r7 0 + $r0 0
+tick: 157  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 158  pc: 44   sp: 230  >> sub $r9 0 <= $r6 0 - $r10 0
+tick: 159  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 160  pc: 46   sp: 230  >> add $r12 0 <= $r10 0 + $r6 0
+tick: 161  pc: 47   sp: 230  >> 0 <= 0/2
+tick: 162  pc: 48   sp: 230  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 163  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 164  pc: 62   sp: 230  >> Popped 1
+tick: 165  pc: 63   sp: 231  >> Popped 1
+tick: 166  pc: 64   sp: 232  >> Popped 0
+tick: 167  pc: 65   sp: 233  >> Popped 1
+tick: 168  pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 169  pc: 58   sp: 235  >> add $r11 1 <= $r12 1 + $r0 0
+tick: 170  pc: 59   sp: 235  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 171  pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 172  pc: 61   sp: 235  >> rcall to @37 [low_param:1 high_param:1]
+tick: 173  pc: 37   sp: 234  >> Pushed 1
+tick: 174  pc: 38   sp: 233  >> Pushed 0
+tick: 175  pc: 39   sp: 232  >> Pushed 1
+tick: 176  pc: 40   sp: 231  >> Pushed 1
+tick: 177  pc: 41   sp: 230  >> add $r10 1 <= $r11 1 + $r0 0
+tick: 178  pc: 42   sp: 230  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 179  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 180  pc: 44   sp: 230  >> sub $r9 0 <= $r6 1 - $r10 1
+tick: 181  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 182  pc: 46   sp: 230  >> add $r12 2 <= $r10 1 + $r6 1
+tick: 183  pc: 47   sp: 230  >> 1 <= 2/2
+tick: 184  pc: 48   sp: 230  >> add $r12 2 <= $r12 1 + $r1 1
+tick: 185  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 186  pc: 62   sp: 230  >> Popped 1
+tick: 187  pc: 63   sp: 231  >> Popped 1
+tick: 188  pc: 64   sp: 232  >> Popped 0
+tick: 189  pc: 65   sp: 233  >> Popped 1
+tick: 190  pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 191  pc: 62   sp: 235  >> Popped 1
+tick: 192  pc: 63   sp: 236  >> Popped 1
+tick: 193  pc: 64   sp: 237  >> Popped 0
+tick: 194  pc: 65   sp: 238  >> Popped 1
+tick: 195  pc: 66   sp: 239  >> sp is currently: 20
+ret to @32
+tick: 196  pc: 32   sp: 240  >> Popped 2
+tick: 197  pc: 33   sp: 241  >> Popped 1
+tick: 198  pc: 34   sp: 242  >> Popped 0
+tick: 199  pc: 35   sp: 243  >> Popped 3
+tick: 200  pc: 36   sp: 244  >> sp is currently: 18
+ret to @24
+tick: 201  pc: 24   sp: 245  >> add $r11 2 <= $r12 2 + $r0 0
+tick: 202  pc: 25   sp: 245  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 203  pc: 26   sp: 245  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 204  pc: 27   sp: 245  >> rcall to @5 [low_param:2 high_param:3]
+tick: 205  pc: 5    sp: 244  >> Pushed 3
+tick: 206  pc: 6    sp: 243  >> Pushed 0
+tick: 207  pc: 7    sp: 242  >> Pushed 1
+tick: 208  pc: 8    sp: 241  >> Pushed 2
+tick: 209  pc: 9    sp: 240  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 210  pc: 10   sp: 240  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 211  pc: 11   sp: 240  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 212  pc: 12   sp: 240  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 213  pc: 13   sp: 240  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 214  pc: 14   sp: 240  >> sub $r9 1 <= $r9 2 - $r1 1
+tick: 215  pc: 15   sp: 240  >> 1 < 1 is False. $r2 <= 0
+tick: 216  pc: 16   sp: 240  >> False <= 0 eq 1; beq, not jumping
+tick: 217  pc: 17   sp: 240  >> add $r12 5 <= $r10 2 + $r6 3
+tick: 218  pc: 18   sp: 240  >> 2 <= 5/2
+tick: 219  pc: 19   sp: 240  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 220  pc: 20   sp: 240  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 221  pc: 21   sp: 240  >> sub $r7 2 <= $r12 3 - $r1 1
+tick: 222  pc: 22   sp: 240  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 223  pc: 23   sp: 240  >> rcall to @5 [low_param:2 high_param:2]
+tick: 224  pc: 5    sp: 239  >> Pushed 3
+tick: 225  pc: 6    sp: 238  >> Pushed 2
+tick: 226  pc: 7    sp: 237  >> Pushed 0
+tick: 227  pc: 8    sp: 236  >> Pushed 3
+tick: 228  pc: 9    sp: 235  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 229  pc: 10   sp: 235  >> add $r6 2 <= $r7 2 + $r0 0
+tick: 230  pc: 11   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 231  pc: 12   sp: 235  >> sub $r9 0 <= $r6 2 - $r10 2
+tick: 232  pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 233  pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 234  pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 235  pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 236  pc: 32   sp: 235  >> Popped 3
+tick: 237  pc: 33   sp: 236  >> Popped 0
+tick: 238  pc: 34   sp: 237  >> Popped 2
+tick: 239  pc: 35   sp: 238  >> Popped 3
+tick: 240  pc: 36   sp: 239  >> sp is currently: 18
+ret to @24
+tick: 241  pc: 24   sp: 240  >> add $r11 3 <= $r12 3 + $r0 0
+tick: 242  pc: 25   sp: 240  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 243  pc: 26   sp: 240  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 244  pc: 27   sp: 240  >> rcall to @5 [low_param:3 high_param:3]
+tick: 245  pc: 5    sp: 239  >> Pushed 3
+tick: 246  pc: 6    sp: 238  >> Pushed 2
+tick: 247  pc: 7    sp: 237  >> Pushed 0
+tick: 248  pc: 8    sp: 236  >> Pushed 3
+tick: 249  pc: 9    sp: 235  >> add $r10 3 <= $r11 3 + $r0 0
+tick: 250  pc: 10   sp: 235  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 251  pc: 11   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 252  pc: 12   sp: 235  >> sub $r9 0 <= $r6 3 - $r10 3
+tick: 253  pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 254  pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 255  pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 256  pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 257  pc: 32   sp: 235  >> Popped 3
+tick: 258  pc: 33   sp: 236  >> Popped 0
+tick: 259  pc: 34   sp: 237  >> Popped 2
+tick: 260  pc: 35   sp: 238  >> Popped 3
+tick: 261  pc: 36   sp: 239  >> sp is currently: 1c
+ret to @28
+tick: 262  pc: 28   sp: 240  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 263  pc: 29   sp: 240  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 264  pc: 30   sp: 240  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 265  pc: 31   sp: 240  >> rcall to @37 [low_param:2 high_param:3]
+tick: 266  pc: 37   sp: 239  >> Pushed 3
+tick: 267  pc: 38   sp: 238  >> Pushed 2
+tick: 268  pc: 39   sp: 237  >> Pushed 0
+tick: 269  pc: 40   sp: 236  >> Pushed 3
+tick: 270  pc: 41   sp: 235  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 271  pc: 42   sp: 235  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 272  pc: 43   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 273  pc: 44   sp: 235  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 274  pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 275  pc: 46   sp: 235  >> add $r12 5 <= $r10 2 + $r6 3
+tick: 276  pc: 47   sp: 235  >> 2 <= 5/2
+tick: 277  pc: 48   sp: 235  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 278  pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 279  pc: 50   sp: 235  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 280  pc: 51   sp: 235  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 281  pc: 52   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 282  pc: 53   sp: 235  >> rcall to @67 [low_param:2 high_param:3]
+tick: 283  pc: 67   sp: 234  >> Pushed 3
+tick: 284  pc: 68   sp: 233  >> Pushed 2
+tick: 285  pc: 69   sp: 232  >> Pushed 0
+tick: 286  pc: 70   sp: 231  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 287  pc: 71   sp: 231  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 288  pc: 72   sp: 231  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 289  pc: 73   sp: 231  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 290  pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 291  pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 292  pc: 76   sp: 231  >> 1 <= 2/2
+tick: 293  pc: 77   sp: 231  >> add $r8 2 <= $r10 2 + $r0 0
+tick: 294  pc: 78   sp: 231  >> ld $r13 <= mem(2)
+tick: 295  pc: 79   sp: 231  >> add $r2 3 <= $r8 2 + $r5 1
+tick: 296  pc: 80   sp: 231  >> ld $r14 <= mem(3)
+tick: 297  pc: 81   sp: 231  >> 3 < 32 is True. $r2 <= 1
+tick: 298  pc: 82   sp: 231  >> False <= 1 eq 0; bne, jumping to 86
+tick: 299  pc: 86   sp: 231  >> add $r8 3 <= $r8 2 + $r1 1
+tick: 300  pc: 87   sp: 231  >> add $r15 3 <= $r10 2 + $r5 1
+tick: 301  pc: 88   sp: 231  >> 3 < 3 is False. $r2 <= 0
+tick: 302  pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 303  pc: 91   sp: 231  >> Popped 0
+tick: 304  pc: 92   sp: 232  >> Popped 2
+tick: 305  pc: 93   sp: 233  >> Popped 3
+tick: 306  pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 307  pc: 54   sp: 235  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 308  pc: 55   sp: 235  >> sub $r7 2 <= $r12 3 - $r1 1
+tick: 309  pc: 56   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 310  pc: 57   sp: 235  >> rcall to @37 [low_param:2 high_param:2]
+tick: 311  pc: 37   sp: 234  >> Pushed 3
+tick: 312  pc: 38   sp: 233  >> Pushed 2
+tick: 313  pc: 39   sp: 232  >> Pushed 0
+tick: 314  pc: 40   sp: 231  >> Pushed 3
+tick: 315  pc: 41   sp: 230  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 316  pc: 42   sp: 230  >> add $r6 2 <= $r7 2 + $r0 0
+tick: 317  pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 318  pc: 44   sp: 230  >> sub $r9 0 <= $r6 2 - $r10 2
+tick: 319  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 320  pc: 46   sp: 230  >> add $r12 4 <= $r10 2 + $r6 2
+tick: 321  pc: 47   sp: 230  >> 2 <= 4/2
+tick: 322  pc: 48   sp: 230  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 323  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 324  pc: 62   sp: 230  >> Popped 3
+tick: 325  pc: 63   sp: 231  >> Popped 0
+tick: 326  pc: 64   sp: 232  >> Popped 2
+tick: 327  pc: 65   sp: 233  >> Popped 3
+tick: 328  pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 329  pc: 58   sp: 235  >> add $r11 3 <= $r12 3 + $r0 0
+tick: 330  pc: 59   sp: 235  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 331  pc: 60   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 332  pc: 61   sp: 235  >> rcall to @37 [low_param:3 high_param:3]
+tick: 333  pc: 37   sp: 234  >> Pushed 3
+tick: 334  pc: 38   sp: 233  >> Pushed 2
+tick: 335  pc: 39   sp: 232  >> Pushed 0
+tick: 336  pc: 40   sp: 231  >> Pushed 3
+tick: 337  pc: 41   sp: 230  >> add $r10 3 <= $r11 3 + $r0 0
+tick: 338  pc: 42   sp: 230  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 339  pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 340  pc: 44   sp: 230  >> sub $r9 0 <= $r6 3 - $r10 3
+tick: 341  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 342  pc: 46   sp: 230  >> add $r12 6 <= $r10 3 + $r6 3
+tick: 343  pc: 47   sp: 230  >> 3 <= 6/2
+tick: 344  pc: 48   sp: 230  >> add $r12 4 <= $r12 3 + $r1 1
+tick: 345  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 346  pc: 62   sp: 230  >> Popped 3
+tick: 347  pc: 63   sp: 231  >> Popped 0
+tick: 348  pc: 64   sp: 232  >> Popped 2
+tick: 349  pc: 65   sp: 233  >> Popped 3
+tick: 350  pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 351  pc: 62   sp: 235  >> Popped 3
+tick: 352  pc: 63   sp: 236  >> Popped 0
+tick: 353  pc: 64   sp: 237  >> Popped 2
+tick: 354  pc: 65   sp: 238  >> Popped 3
+tick: 355  pc: 66   sp: 239  >> sp is currently: 20
+ret to @32
+tick: 356  pc: 32   sp: 240  >> Popped 2
+tick: 357  pc: 33   sp: 241  >> Popped 1
+tick: 358  pc: 34   sp: 242  >> Popped 0
+tick: 359  pc: 35   sp: 243  >> Popped 3
+tick: 360  pc: 36   sp: 244  >> sp is currently: 1c
+ret to @28
+tick: 361  pc: 28   sp: 245  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 362  pc: 29   sp: 245  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 363  pc: 30   sp: 245  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 364  pc: 31   sp: 245  >> rcall to @37 [low_param:0 high_param:3]
+tick: 365  pc: 37   sp: 244  >> Pushed 3
+tick: 366  pc: 38   sp: 243  >> Pushed 0
+tick: 367  pc: 39   sp: 242  >> Pushed 1
+tick: 368  pc: 40   sp: 241  >> Pushed 2
+tick: 369  pc: 41   sp: 240  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 370  pc: 42   sp: 240  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 371  pc: 43   sp: 240  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 372  pc: 44   sp: 240  >> sub $r9 3 <= $r6 3 - $r10 0
+tick: 373  pc: 45   sp: 240  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 374  pc: 46   sp: 240  >> add $r12 3 <= $r10 0 + $r6 3
+tick: 375  pc: 47   sp: 240  >> 1 <= 3/2
+tick: 376  pc: 48   sp: 240  >> add $r12 2 <= $r12 1 + $r1 1
+tick: 377  pc: 49   sp: 240  >> False <= 4 eq 1; beq, not jumping
+tick: 378  pc: 50   sp: 240  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 379  pc: 51   sp: 240  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 380  pc: 52   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 381  pc: 53   sp: 240  >> rcall to @67 [low_param:0 high_param:3]
+tick: 382  pc: 67   sp: 239  >> Pushed 3
+tick: 383  pc: 68   sp: 238  >> Pushed 0
+tick: 384  pc: 69   sp: 237  >> Pushed 1
+tick: 385  pc: 70   sp: 236  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 386  pc: 71   sp: 236  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 387  pc: 72   sp: 236  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 388  pc: 73   sp: 236  >> sub $r9 3 <= $r6 3 - $r10 0
+tick: 389  pc: 74   sp: 236  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 390  pc: 75   sp: 236  >> add $r5 4 <= $r9 4 + $r0 0
+tick: 391  pc: 76   sp: 236  >> 2 <= 4/2
+tick: 392  pc: 77   sp: 236  >> add $r8 0 <= $r10 0 + $r0 0
+tick: 393  pc: 78   sp: 236  >> ld $r13 <= mem(0)
+tick: 394  pc: 79   sp: 236  >> add $r2 2 <= $r8 0 + $r5 2
+tick: 395  pc: 80   sp: 236  >> ld $r14 <= mem(2)
+tick: 396  pc: 81   sp: 236  >> 32 < 16 is False. $r2 <= 0
+tick: 397  pc: 82   sp: 236  >> False <= 0 eq 1; bne, jumping to 86
+tick: 398  pc: 86   sp: 236  >> add $r8 1 <= $r8 0 + $r1 1
+tick: 399  pc: 87   sp: 236  >> add $r15 2 <= $r10 0 + $r5 2
+tick: 400  pc: 88   sp: 236  >> 1 < 2 is True. $r2 <= 1
+tick: 401  pc: 89   sp: 236  >> False <= 1 eq 0; beq, not jumping
+tick: 402  pc: 90   sp: 236  >> Jumping to @78
+tick: 403  pc: 78   sp: 236  >> ld $r13 <= mem(1)
+tick: 404  pc: 79   sp: 236  >> add $r2 3 <= $r8 1 + $r5 2
+tick: 405  pc: 80   sp: 236  >> ld $r14 <= mem(3)
+tick: 406  pc: 81   sp: 236  >> 3 < 2560 is True. $r2 <= 1
+tick: 407  pc: 82   sp: 236  >> True <= 1 eq 1; bne, not jumping
+tick: 408  pc: 83   sp: 236  >> add $r2 3 <= $r8 1 + $r5 2
+tick: 409  pc: 84   sp: 236  >> st mem(3) <= $r13
+tick: 410  pc: 85   sp: 236  >> st mem(1) <= $r14
+tick: 411  pc: 86   sp: 236  >> add $r8 2 <= $r8 1 + $r1 1
+tick: 412  pc: 87   sp: 236  >> add $r15 2 <= $r10 0 + $r5 2
+tick: 413  pc: 88   sp: 236  >> 2 < 2 is False. $r2 <= 0
+tick: 414  pc: 89   sp: 236  >> True <= 0 eq 0; beq, jumping to 91
+tick: 415  pc: 91   sp: 236  >> Popped 1
+tick: 416  pc: 92   sp: 237  >> Popped 0
+tick: 417  pc: 93   sp: 238  >> Popped 3
+tick: 418  pc: 94   sp: 239  >> sp is currently: 36
+ret to @54
+tick: 419  pc: 54   sp: 240  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 420  pc: 55   sp: 240  >> sub $r7 1 <= $r12 2 - $r1 1
+tick: 421  pc: 56   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 422  pc: 57   sp: 240  >> rcall to @37 [low_param:0 high_param:1]
+tick: 423  pc: 37   sp: 239  >> Pushed 3
+tick: 424  pc: 38   sp: 238  >> Pushed 0
+tick: 425  pc: 39   sp: 237  >> Pushed 1
+tick: 426  pc: 40   sp: 236  >> Pushed 2
+tick: 427  pc: 41   sp: 235  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 428  pc: 42   sp: 235  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 429  pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 430  pc: 44   sp: 235  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 431  pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 432  pc: 46   sp: 235  >> add $r12 1 <= $r10 0 + $r6 1
+tick: 433  pc: 47   sp: 235  >> 0 <= 1/2
+tick: 434  pc: 48   sp: 235  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 435  pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 436  pc: 50   sp: 235  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 437  pc: 51   sp: 235  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 438  pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 439  pc: 53   sp: 235  >> rcall to @67 [low_param:0 high_param:1]
+tick: 440  pc: 67   sp: 234  >> Pushed 1
+tick: 441  pc: 68   sp: 233  >> Pushed 0
+tick: 442  pc: 69   sp: 232  >> Pushed 1
+tick: 443  pc: 70   sp: 231  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 444  pc: 71   sp: 231  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 445  pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 446  pc: 73   sp: 231  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 447  pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 448  pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 449  pc: 76   sp: 231  >> 1 <= 2/2
+tick: 450  pc: 77   sp: 231  >> add $r8 0 <= $r10 0 + $r0 0
+tick: 451  pc: 78   sp: 231  >> ld $r13 <= mem(0)
+tick: 452  pc: 79   sp: 231  >> add $r2 1 <= $r8 0 + $r5 1
+tick: 453  pc: 80   sp: 231  >> ld $r14 <= mem(1)
+tick: 454  pc: 81   sp: 231  >> 3 < 16 is True. $r2 <= 1
+tick: 455  pc: 82   sp: 231  >> True <= 1 eq 1; bne, not jumping
+tick: 456  pc: 83   sp: 231  >> add $r2 1 <= $r8 0 + $r5 1
+tick: 457  pc: 84   sp: 231  >> st mem(1) <= $r13
+tick: 458  pc: 85   sp: 231  >> st mem(0) <= $r14
+tick: 459  pc: 86   sp: 231  >> add $r8 1 <= $r8 0 + $r1 1
+tick: 460  pc: 87   sp: 231  >> add $r15 1 <= $r10 0 + $r5 1
+tick: 461  pc: 88   sp: 231  >> 1 < 1 is False. $r2 <= 0
+tick: 462  pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 463  pc: 91   sp: 231  >> Popped 1
+tick: 464  pc: 92   sp: 232  >> Popped 0
+tick: 465  pc: 93   sp: 233  >> Popped 1
+tick: 466  pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 467  pc: 54   sp: 235  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 468  pc: 55   sp: 235  >> sub $r7 0 <= $r12 1 - $r1 1
+tick: 469  pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 470  pc: 57   sp: 235  >> rcall to @37 [low_param:0 high_param:0]
+tick: 471  pc: 37   sp: 234  >> Pushed 1
+tick: 472  pc: 38   sp: 233  >> Pushed 0
+tick: 473  pc: 39   sp: 232  >> Pushed 1
+tick: 474  pc: 40   sp: 231  >> Pushed 1
+tick: 475  pc: 41   sp: 230  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 476  pc: 42   sp: 230  >> add $r6 0 <= $r7 0 + $r0 0
+tick: 477  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 478  pc: 44   sp: 230  >> sub $r9 0 <= $r6 0 - $r10 0
+tick: 479  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 480  pc: 46   sp: 230  >> add $r12 0 <= $r10 0 + $r6 0
+tick: 481  pc: 47   sp: 230  >> 0 <= 0/2
+tick: 482  pc: 48   sp: 230  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 483  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 484  pc: 62   sp: 230  >> Popped 1
+tick: 485  pc: 63   sp: 231  >> Popped 1
+tick: 486  pc: 64   sp: 232  >> Popped 0
+tick: 487  pc: 65   sp: 233  >> Popped 1
+tick: 488  pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 489  pc: 58   sp: 235  >> add $r11 1 <= $r12 1 + $r0 0
+tick: 490  pc: 59   sp: 235  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 491  pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 492  pc: 61   sp: 235  >> rcall to @37 [low_param:1 high_param:1]
+tick: 493  pc: 37   sp: 234  >> Pushed 1
+tick: 494  pc: 38   sp: 233  >> Pushed 0
+tick: 495  pc: 39   sp: 232  >> Pushed 1
+tick: 496  pc: 40   sp: 231  >> Pushed 1
+tick: 497  pc: 41   sp: 230  >> add $r10 1 <= $r11 1 + $r0 0
+tick: 498  pc: 42   sp: 230  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 499  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 500  pc: 44   sp: 230  >> sub $r9 0 <= $r6 1 - $r10 1
+tick: 501  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 502  pc: 46   sp: 230  >> add $r12 2 <= $r10 1 + $r6 1
+tick: 503  pc: 47   sp: 230  >> 1 <= 2/2
+tick: 504  pc: 48   sp: 230  >> add $r12 2 <= $r12 1 + $r1 1
+tick: 505  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 506  pc: 62   sp: 230  >> Popped 1
+tick: 507  pc: 63   sp: 231  >> Popped 1
+tick: 508  pc: 64   sp: 232  >> Popped 0
+tick: 509  pc: 65   sp: 233  >> Popped 1
+tick: 510  pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 511  pc: 62   sp: 235  >> Popped 2
+tick: 512  pc: 63   sp: 236  >> Popped 1
+tick: 513  pc: 64   sp: 237  >> Popped 0
+tick: 514  pc: 65   sp: 238  >> Popped 3
+tick: 515  pc: 66   sp: 239  >> sp is currently: 3a
+ret to @58
+tick: 516  pc: 58   sp: 240  >> add $r11 2 <= $r12 2 + $r0 0
+tick: 517  pc: 59   sp: 240  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 518  pc: 60   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 519  pc: 61   sp: 240  >> rcall to @37 [low_param:2 high_param:3]
+tick: 520  pc: 37   sp: 239  >> Pushed 3
+tick: 521  pc: 38   sp: 238  >> Pushed 0
+tick: 522  pc: 39   sp: 237  >> Pushed 1
+tick: 523  pc: 40   sp: 236  >> Pushed 2
+tick: 524  pc: 41   sp: 235  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 525  pc: 42   sp: 235  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 526  pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 527  pc: 44   sp: 235  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 528  pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 529  pc: 46   sp: 235  >> add $r12 5 <= $r10 2 + $r6 3
+tick: 530  pc: 47   sp: 235  >> 2 <= 5/2
+tick: 531  pc: 48   sp: 235  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 532  pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 533  pc: 50   sp: 235  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 534  pc: 51   sp: 235  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 535  pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 536  pc: 53   sp: 235  >> rcall to @67 [low_param:2 high_param:3]
+tick: 537  pc: 67   sp: 234  >> Pushed 3
+tick: 538  pc: 68   sp: 233  >> Pushed 2
+tick: 539  pc: 69   sp: 232  >> Pushed 1
+tick: 540  pc: 70   sp: 231  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 541  pc: 71   sp: 231  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 542  pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 543  pc: 73   sp: 231  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 544  pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 545  pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 546  pc: 76   sp: 231  >> 1 <= 2/2
+tick: 547  pc: 77   sp: 231  >> add $r8 2 <= $r10 2 + $r0 0
+tick: 548  pc: 78   sp: 231  >> ld $r13 <= mem(2)
+tick: 549  pc: 79   sp: 231  >> add $r2 3 <= $r8 2 + $r5 1
+tick: 550  pc: 80   sp: 231  >> ld $r14 <= mem(3)
+tick: 551  pc: 81   sp: 231  >> 2560 < 32 is False. $r2 <= 0
+tick: 552  pc: 82   sp: 231  >> False <= 0 eq 1; bne, jumping to 86
+tick: 553  pc: 86   sp: 231  >> add $r8 3 <= $r8 2 + $r1 1
+tick: 554  pc: 87   sp: 231  >> add $r15 3 <= $r10 2 + $r5 1
+tick: 555  pc: 88   sp: 231  >> 3 < 3 is False. $r2 <= 0
+tick: 556  pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 557  pc: 91   sp: 231  >> Popped 1
+tick: 558  pc: 92   sp: 232  >> Popped 2
+tick: 559  pc: 93   sp: 233  >> Popped 3
+tick: 560  pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 561  pc: 54   sp: 235  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 562  pc: 55   sp: 235  >> sub $r7 2 <= $r12 3 - $r1 1
+tick: 563  pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 564  pc: 57   sp: 235  >> rcall to @37 [low_param:2 high_param:2]
+tick: 565  pc: 37   sp: 234  >> Pushed 3
+tick: 566  pc: 38   sp: 233  >> Pushed 2
+tick: 567  pc: 39   sp: 232  >> Pushed 1
+tick: 568  pc: 40   sp: 231  >> Pushed 3
+tick: 569  pc: 41   sp: 230  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 570  pc: 42   sp: 230  >> add $r6 2 <= $r7 2 + $r0 0
+tick: 571  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 572  pc: 44   sp: 230  >> sub $r9 0 <= $r6 2 - $r10 2
+tick: 573  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 574  pc: 46   sp: 230  >> add $r12 4 <= $r10 2 + $r6 2
+tick: 575  pc: 47   sp: 230  >> 2 <= 4/2
+tick: 576  pc: 48   sp: 230  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 577  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 578  pc: 62   sp: 230  >> Popped 3
+tick: 579  pc: 63   sp: 231  >> Popped 1
+tick: 580  pc: 64   sp: 232  >> Popped 2
+tick: 581  pc: 65   sp: 233  >> Popped 3
+tick: 582  pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 583  pc: 58   sp: 235  >> add $r11 3 <= $r12 3 + $r0 0
+tick: 584  pc: 59   sp: 235  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 585  pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 586  pc: 61   sp: 235  >> rcall to @37 [low_param:3 high_param:3]
+tick: 587  pc: 37   sp: 234  >> Pushed 3
+tick: 588  pc: 38   sp: 233  >> Pushed 2
+tick: 589  pc: 39   sp: 232  >> Pushed 1
+tick: 590  pc: 40   sp: 231  >> Pushed 3
+tick: 591  pc: 41   sp: 230  >> add $r10 3 <= $r11 3 + $r0 0
+tick: 592  pc: 42   sp: 230  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 593  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 594  pc: 44   sp: 230  >> sub $r9 0 <= $r6 3 - $r10 3
+tick: 595  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 596  pc: 46   sp: 230  >> add $r12 6 <= $r10 3 + $r6 3
+tick: 597  pc: 47   sp: 230  >> 3 <= 6/2
+tick: 598  pc: 48   sp: 230  >> add $r12 4 <= $r12 3 + $r1 1
+tick: 599  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 600  pc: 62   sp: 230  >> Popped 3
+tick: 601  pc: 63   sp: 231  >> Popped 1
+tick: 602  pc: 64   sp: 232  >> Popped 2
+tick: 603  pc: 65   sp: 233  >> Popped 3
+tick: 604  pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 605  pc: 62   sp: 235  >> Popped 2
+tick: 606  pc: 63   sp: 236  >> Popped 1
+tick: 607  pc: 64   sp: 237  >> Popped 0
+tick: 608  pc: 65   sp: 238  >> Popped 3
+tick: 609  pc: 66   sp: 239  >> sp is currently: 3e
+ret to @62
+tick: 610  pc: 62   sp: 240  >> Popped 2
+tick: 611  pc: 63   sp: 241  >> Popped 1
+tick: 612  pc: 64   sp: 242  >> Popped 0
+tick: 613  pc: 65   sp: 243  >> Popped 3
+tick: 614  pc: 66   sp: 244  >> sp is currently: 20
+ret to @32
+tick: 615  pc: 32   sp: 245  >> Popped 4
+tick: 616  pc: 33   sp: 246  >> Popped 1
+tick: 617  pc: 34   sp: 247  >> Popped 0
+tick: 618  pc: 35   sp: 248  >> Popped 7
+tick: 619  pc: 36   sp: 249  >> sp is currently: 18
+ret to @24
+tick: 620  pc: 24   sp: 250  >> add $r11 4 <= $r12 4 + $r0 0
+tick: 621  pc: 25   sp: 250  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 622  pc: 26   sp: 250  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 623  pc: 27   sp: 250  >> rcall to @5 [low_param:4 high_param:7]
+tick: 624  pc: 5    sp: 249  >> Pushed 7
+tick: 625  pc: 6    sp: 248  >> Pushed 0
+tick: 626  pc: 7    sp: 247  >> Pushed 1
+tick: 627  pc: 8    sp: 246  >> Pushed 4
+tick: 628  pc: 9    sp: 245  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 629  pc: 10   sp: 245  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 630  pc: 11   sp: 245  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 631  pc: 12   sp: 245  >> sub $r9 3 <= $r6 7 - $r10 4
+tick: 632  pc: 13   sp: 245  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 633  pc: 14   sp: 245  >> sub $r9 3 <= $r9 4 - $r1 1
+tick: 634  pc: 15   sp: 245  >> 3 < 1 is False. $r2 <= 0
+tick: 635  pc: 16   sp: 245  >> False <= 0 eq 1; beq, not jumping
+tick: 636  pc: 17   sp: 245  >> add $r12 11 <= $r10 4 + $r6 7
+tick: 637  pc: 18   sp: 245  >> 5 <= 11/2
+tick: 638  pc: 19   sp: 245  >> add $r12 6 <= $r12 5 + $r1 1
+tick: 639  pc: 20   sp: 245  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 640  pc: 21   sp: 245  >> sub $r7 5 <= $r12 6 - $r1 1
+tick: 641  pc: 22   sp: 245  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 642  pc: 23   sp: 245  >> rcall to @5 [low_param:4 high_param:5]
+tick: 643  pc: 5    sp: 244  >> Pushed 7
+tick: 644  pc: 6    sp: 243  >> Pushed 4
+tick: 645  pc: 7    sp: 242  >> Pushed 0
+tick: 646  pc: 8    sp: 241  >> Pushed 6
+tick: 647  pc: 9    sp: 240  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 648  pc: 10   sp: 240  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 649  pc: 11   sp: 240  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 650  pc: 12   sp: 240  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 651  pc: 13   sp: 240  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 652  pc: 14   sp: 240  >> sub $r9 1 <= $r9 2 - $r1 1
+tick: 653  pc: 15   sp: 240  >> 1 < 1 is False. $r2 <= 0
+tick: 654  pc: 16   sp: 240  >> False <= 0 eq 1; beq, not jumping
+tick: 655  pc: 17   sp: 240  >> add $r12 9 <= $r10 4 + $r6 5
+tick: 656  pc: 18   sp: 240  >> 4 <= 9/2
+tick: 657  pc: 19   sp: 240  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 658  pc: 20   sp: 240  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 659  pc: 21   sp: 240  >> sub $r7 4 <= $r12 5 - $r1 1
+tick: 660  pc: 22   sp: 240  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 661  pc: 23   sp: 240  >> rcall to @5 [low_param:4 high_param:4]
+tick: 662  pc: 5    sp: 239  >> Pushed 5
+tick: 663  pc: 6    sp: 238  >> Pushed 4
+tick: 664  pc: 7    sp: 237  >> Pushed 1
+tick: 665  pc: 8    sp: 236  >> Pushed 5
+tick: 666  pc: 9    sp: 235  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 667  pc: 10   sp: 235  >> add $r6 4 <= $r7 4 + $r0 0
+tick: 668  pc: 11   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 669  pc: 12   sp: 235  >> sub $r9 0 <= $r6 4 - $r10 4
+tick: 670  pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 671  pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 672  pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 673  pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 674  pc: 32   sp: 235  >> Popped 5
+tick: 675  pc: 33   sp: 236  >> Popped 1
+tick: 676  pc: 34   sp: 237  >> Popped 4
+tick: 677  pc: 35   sp: 238  >> Popped 5
+tick: 678  pc: 36   sp: 239  >> sp is currently: 18
+ret to @24
+tick: 679  pc: 24   sp: 240  >> add $r11 5 <= $r12 5 + $r0 0
+tick: 680  pc: 25   sp: 240  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 681  pc: 26   sp: 240  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 682  pc: 27   sp: 240  >> rcall to @5 [low_param:5 high_param:5]
+tick: 683  pc: 5    sp: 239  >> Pushed 5
+tick: 684  pc: 6    sp: 238  >> Pushed 4
+tick: 685  pc: 7    sp: 237  >> Pushed 1
+tick: 686  pc: 8    sp: 236  >> Pushed 5
+tick: 687  pc: 9    sp: 235  >> add $r10 5 <= $r11 5 + $r0 0
+tick: 688  pc: 10   sp: 235  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 689  pc: 11   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 690  pc: 12   sp: 235  >> sub $r9 0 <= $r6 5 - $r10 5
+tick: 691  pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 692  pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 693  pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 694  pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 695  pc: 32   sp: 235  >> Popped 5
+tick: 696  pc: 33   sp: 236  >> Popped 1
+tick: 697  pc: 34   sp: 237  >> Popped 4
+tick: 698  pc: 35   sp: 238  >> Popped 5
+tick: 699  pc: 36   sp: 239  >> sp is currently: 1c
+ret to @28
+tick: 700  pc: 28   sp: 240  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 701  pc: 29   sp: 240  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 702  pc: 30   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 703  pc: 31   sp: 240  >> rcall to @37 [low_param:4 high_param:5]
+tick: 704  pc: 37   sp: 239  >> Pushed 5
+tick: 705  pc: 38   sp: 238  >> Pushed 4
+tick: 706  pc: 39   sp: 237  >> Pushed 1
+tick: 707  pc: 40   sp: 236  >> Pushed 5
+tick: 708  pc: 41   sp: 235  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 709  pc: 42   sp: 235  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 710  pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 711  pc: 44   sp: 235  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 712  pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 713  pc: 46   sp: 235  >> add $r12 9 <= $r10 4 + $r6 5
+tick: 714  pc: 47   sp: 235  >> 4 <= 9/2
+tick: 715  pc: 48   sp: 235  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 716  pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 717  pc: 50   sp: 235  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 718  pc: 51   sp: 235  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 719  pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 720  pc: 53   sp: 235  >> rcall to @67 [low_param:4 high_param:5]
+tick: 721  pc: 67   sp: 234  >> Pushed 5
+tick: 722  pc: 68   sp: 233  >> Pushed 4
+tick: 723  pc: 69   sp: 232  >> Pushed 1
+tick: 724  pc: 70   sp: 231  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 725  pc: 71   sp: 231  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 726  pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 727  pc: 73   sp: 231  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 728  pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 729  pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 730  pc: 76   sp: 231  >> 1 <= 2/2
+tick: 731  pc: 77   sp: 231  >> add $r8 4 <= $r10 4 + $r0 0
+tick: 732  pc: 78   sp: 231  >> ld $r13 <= mem(4)
+tick: 733  pc: 79   sp: 231  >> add $r2 5 <= $r8 4 + $r5 1
+tick: 734  pc: 80   sp: 231  >> ld $r14 <= mem(5)
+tick: 735  pc: 81   sp: 231  >> 155 < 4 is False. $r2 <= 0
+tick: 736  pc: 82   sp: 231  >> False <= 0 eq 1; bne, jumping to 86
+tick: 737  pc: 86   sp: 231  >> add $r8 5 <= $r8 4 + $r1 1
+tick: 738  pc: 87   sp: 231  >> add $r15 5 <= $r10 4 + $r5 1
+tick: 739  pc: 88   sp: 231  >> 5 < 5 is False. $r2 <= 0
+tick: 740  pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 741  pc: 91   sp: 231  >> Popped 1
+tick: 742  pc: 92   sp: 232  >> Popped 4
+tick: 743  pc: 93   sp: 233  >> Popped 5
+tick: 744  pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 745  pc: 54   sp: 235  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 746  pc: 55   sp: 235  >> sub $r7 4 <= $r12 5 - $r1 1
+tick: 747  pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 748  pc: 57   sp: 235  >> rcall to @37 [low_param:4 high_param:4]
+tick: 749  pc: 37   sp: 234  >> Pushed 5
+tick: 750  pc: 38   sp: 233  >> Pushed 4
+tick: 751  pc: 39   sp: 232  >> Pushed 1
+tick: 752  pc: 40   sp: 231  >> Pushed 5
+tick: 753  pc: 41   sp: 230  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 754  pc: 42   sp: 230  >> add $r6 4 <= $r7 4 + $r0 0
+tick: 755  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 756  pc: 44   sp: 230  >> sub $r9 0 <= $r6 4 - $r10 4
+tick: 757  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 758  pc: 46   sp: 230  >> add $r12 8 <= $r10 4 + $r6 4
+tick: 759  pc: 47   sp: 230  >> 4 <= 8/2
+tick: 760  pc: 48   sp: 230  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 761  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 762  pc: 62   sp: 230  >> Popped 5
+tick: 763  pc: 63   sp: 231  >> Popped 1
+tick: 764  pc: 64   sp: 232  >> Popped 4
+tick: 765  pc: 65   sp: 233  >> Popped 5
+tick: 766  pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 767  pc: 58   sp: 235  >> add $r11 5 <= $r12 5 + $r0 0
+tick: 768  pc: 59   sp: 235  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 769  pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 770  pc: 61   sp: 235  >> rcall to @37 [low_param:5 high_param:5]
+tick: 771  pc: 37   sp: 234  >> Pushed 5
+tick: 772  pc: 38   sp: 233  >> Pushed 4
+tick: 773  pc: 39   sp: 232  >> Pushed 1
+tick: 774  pc: 40   sp: 231  >> Pushed 5
+tick: 775  pc: 41   sp: 230  >> add $r10 5 <= $r11 5 + $r0 0
+tick: 776  pc: 42   sp: 230  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 777  pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 778  pc: 44   sp: 230  >> sub $r9 0 <= $r6 5 - $r10 5
+tick: 779  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 780  pc: 46   sp: 230  >> add $r12 10 <= $r10 5 + $r6 5
+tick: 781  pc: 47   sp: 230  >> 5 <= 10/2
+tick: 782  pc: 48   sp: 230  >> add $r12 6 <= $r12 5 + $r1 1
+tick: 783  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 784  pc: 62   sp: 230  >> Popped 5
+tick: 785  pc: 63   sp: 231  >> Popped 1
+tick: 786  pc: 64   sp: 232  >> Popped 4
+tick: 787  pc: 65   sp: 233  >> Popped 5
+tick: 788  pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 789  pc: 62   sp: 235  >> Popped 5
+tick: 790  pc: 63   sp: 236  >> Popped 1
+tick: 791  pc: 64   sp: 237  >> Popped 4
+tick: 792  pc: 65   sp: 238  >> Popped 5
+tick: 793  pc: 66   sp: 239  >> sp is currently: 20
+ret to @32
+tick: 794  pc: 32   sp: 240  >> Popped 6
+tick: 795  pc: 33   sp: 241  >> Popped 0
+tick: 796  pc: 34   sp: 242  >> Popped 4
+tick: 797  pc: 35   sp: 243  >> Popped 7
+tick: 798  pc: 36   sp: 244  >> sp is currently: 18
+ret to @24
+tick: 799  pc: 24   sp: 245  >> add $r11 6 <= $r12 6 + $r0 0
+tick: 800  pc: 25   sp: 245  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 801  pc: 26   sp: 245  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 802  pc: 27   sp: 245  >> rcall to @5 [low_param:6 high_param:7]
+tick: 803  pc: 5    sp: 244  >> Pushed 7
+tick: 804  pc: 6    sp: 243  >> Pushed 4
+tick: 805  pc: 7    sp: 242  >> Pushed 0
+tick: 806  pc: 8    sp: 241  >> Pushed 6
+tick: 807  pc: 9    sp: 240  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 808  pc: 10   sp: 240  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 809  pc: 11   sp: 240  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 810  pc: 12   sp: 240  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 811  pc: 13   sp: 240  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 812  pc: 14   sp: 240  >> sub $r9 1 <= $r9 2 - $r1 1
+tick: 813  pc: 15   sp: 240  >> 1 < 1 is False. $r2 <= 0
+tick: 814  pc: 16   sp: 240  >> False <= 0 eq 1; beq, not jumping
+tick: 815  pc: 17   sp: 240  >> add $r12 13 <= $r10 6 + $r6 7
+tick: 816  pc: 18   sp: 240  >> 6 <= 13/2
+tick: 817  pc: 19   sp: 240  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 818  pc: 20   sp: 240  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 819  pc: 21   sp: 240  >> sub $r7 6 <= $r12 7 - $r1 1
+tick: 820  pc: 22   sp: 240  >> add $r4 1 <= $r1 1 + $r0 0
+tick: 821  pc: 23   sp: 240  >> rcall to @5 [low_param:6 high_param:6]
+tick: 822  pc: 5    sp: 239  >> Pushed 7
+tick: 823  pc: 6    sp: 238  >> Pushed 6
+tick: 824  pc: 7    sp: 237  >> Pushed 0
+tick: 825  pc: 8    sp: 236  >> Pushed 7
+tick: 826  pc: 9    sp: 235  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 827  pc: 10   sp: 235  >> add $r6 6 <= $r7 6 + $r0 0
+tick: 828  pc: 11   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 829  pc: 12   sp: 235  >> sub $r9 0 <= $r6 6 - $r10 6
+tick: 830  pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 831  pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 832  pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 833  pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 834  pc: 32   sp: 235  >> Popped 7
+tick: 835  pc: 33   sp: 236  >> Popped 0
+tick: 836  pc: 34   sp: 237  >> Popped 6
+tick: 837  pc: 35   sp: 238  >> Popped 7
+tick: 838  pc: 36   sp: 239  >> sp is currently: 18
+ret to @24
+tick: 839  pc: 24   sp: 240  >> add $r11 7 <= $r12 7 + $r0 0
+tick: 840  pc: 25   sp: 240  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 841  pc: 26   sp: 240  >> add $r4 0 <= $r0 0 + $r0 0
+tick: 842  pc: 27   sp: 240  >> rcall to @5 [low_param:7 high_param:7]
+tick: 843  pc: 5    sp: 239  >> Pushed 7
+tick: 844  pc: 6    sp: 238  >> Pushed 6
+tick: 845  pc: 7    sp: 237  >> Pushed 0
+tick: 846  pc: 8    sp: 236  >> Pushed 7
+tick: 847  pc: 9    sp: 235  >> add $r10 7 <= $r11 7 + $r0 0
+tick: 848  pc: 10   sp: 235  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 849  pc: 11   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 850  pc: 12   sp: 235  >> sub $r9 0 <= $r6 7 - $r10 7
+tick: 851  pc: 13   sp: 235  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 852  pc: 14   sp: 235  >> sub $r9 0 <= $r9 1 - $r1 1
+tick: 853  pc: 15   sp: 235  >> 0 < 1 is True. $r2 <= 1
+tick: 854  pc: 16   sp: 235  >> True <= 1 eq 1; beq, jumping to 32
+tick: 855  pc: 32   sp: 235  >> Popped 7
+tick: 856  pc: 33   sp: 236  >> Popped 0
+tick: 857  pc: 34   sp: 237  >> Popped 6
+tick: 858  pc: 35   sp: 238  >> Popped 7
+tick: 859  pc: 36   sp: 239  >> sp is currently: 1c
+ret to @28
+tick: 860  pc: 28   sp: 240  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 861  pc: 29   sp: 240  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 862  pc: 30   sp: 240  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 863  pc: 31   sp: 240  >> rcall to @37 [low_param:6 high_param:7]
+tick: 864  pc: 37   sp: 239  >> Pushed 7
+tick: 865  pc: 38   sp: 238  >> Pushed 6
+tick: 866  pc: 39   sp: 237  >> Pushed 0
+tick: 867  pc: 40   sp: 236  >> Pushed 7
+tick: 868  pc: 41   sp: 235  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 869  pc: 42   sp: 235  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 870  pc: 43   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 871  pc: 44   sp: 235  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 872  pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 873  pc: 46   sp: 235  >> add $r12 13 <= $r10 6 + $r6 7
+tick: 874  pc: 47   sp: 235  >> 6 <= 13/2
+tick: 875  pc: 48   sp: 235  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 876  pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 877  pc: 50   sp: 235  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 878  pc: 51   sp: 235  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 879  pc: 52   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 880  pc: 53   sp: 235  >> rcall to @67 [low_param:6 high_param:7]
+tick: 881  pc: 67   sp: 234  >> Pushed 7
+tick: 882  pc: 68   sp: 233  >> Pushed 6
+tick: 883  pc: 69   sp: 232  >> Pushed 0
+tick: 884  pc: 70   sp: 231  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 885  pc: 71   sp: 231  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 886  pc: 72   sp: 231  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 887  pc: 73   sp: 231  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 888  pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 889  pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 890  pc: 76   sp: 231  >> 1 <= 2/2
+tick: 891  pc: 77   sp: 231  >> add $r8 6 <= $r10 6 + $r0 0
+tick: 892  pc: 78   sp: 231  >> ld $r13 <= mem(6)
+tick: 893  pc: 79   sp: 231  >> add $r2 7 <= $r8 6 + $r5 1
+tick: 894  pc: 80   sp: 231  >> ld $r14 <= mem(7)
+tick: 895  pc: 81   sp: 231  >> 4 < 10 is True. $r2 <= 1
+tick: 896  pc: 82   sp: 231  >> False <= 1 eq 0; bne, jumping to 86
+tick: 897  pc: 86   sp: 231  >> add $r8 7 <= $r8 6 + $r1 1
+tick: 898  pc: 87   sp: 231  >> add $r15 7 <= $r10 6 + $r5 1
+tick: 899  pc: 88   sp: 231  >> 7 < 7 is False. $r2 <= 0
+tick: 900  pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 901  pc: 91   sp: 231  >> Popped 0
+tick: 902  pc: 92   sp: 232  >> Popped 6
+tick: 903  pc: 93   sp: 233  >> Popped 7
+tick: 904  pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 905  pc: 54   sp: 235  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 906  pc: 55   sp: 235  >> sub $r7 6 <= $r12 7 - $r1 1
+tick: 907  pc: 56   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 908  pc: 57   sp: 235  >> rcall to @37 [low_param:6 high_param:6]
+tick: 909  pc: 37   sp: 234  >> Pushed 7
+tick: 910  pc: 38   sp: 233  >> Pushed 6
+tick: 911  pc: 39   sp: 232  >> Pushed 0
+tick: 912  pc: 40   sp: 231  >> Pushed 7
+tick: 913  pc: 41   sp: 230  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 914  pc: 42   sp: 230  >> add $r6 6 <= $r7 6 + $r0 0
+tick: 915  pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 916  pc: 44   sp: 230  >> sub $r9 0 <= $r6 6 - $r10 6
+tick: 917  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 918  pc: 46   sp: 230  >> add $r12 12 <= $r10 6 + $r6 6
+tick: 919  pc: 47   sp: 230  >> 6 <= 12/2
+tick: 920  pc: 48   sp: 230  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 921  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 922  pc: 62   sp: 230  >> Popped 7
+tick: 923  pc: 63   sp: 231  >> Popped 0
+tick: 924  pc: 64   sp: 232  >> Popped 6
+tick: 925  pc: 65   sp: 233  >> Popped 7
+tick: 926  pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 927  pc: 58   sp: 235  >> add $r11 7 <= $r12 7 + $r0 0
+tick: 928  pc: 59   sp: 235  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 929  pc: 60   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 930  pc: 61   sp: 235  >> rcall to @37 [low_param:7 high_param:7]
+tick: 931  pc: 37   sp: 234  >> Pushed 7
+tick: 932  pc: 38   sp: 233  >> Pushed 6
+tick: 933  pc: 39   sp: 232  >> Pushed 0
+tick: 934  pc: 40   sp: 231  >> Pushed 7
+tick: 935  pc: 41   sp: 230  >> add $r10 7 <= $r11 7 + $r0 0
+tick: 936  pc: 42   sp: 230  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 937  pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 938  pc: 44   sp: 230  >> sub $r9 0 <= $r6 7 - $r10 7
+tick: 939  pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 940  pc: 46   sp: 230  >> add $r12 14 <= $r10 7 + $r6 7
+tick: 941  pc: 47   sp: 230  >> 7 <= 14/2
+tick: 942  pc: 48   sp: 230  >> add $r12 8 <= $r12 7 + $r1 1
+tick: 943  pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 944  pc: 62   sp: 230  >> Popped 7
+tick: 945  pc: 63   sp: 231  >> Popped 0
+tick: 946  pc: 64   sp: 232  >> Popped 6
+tick: 947  pc: 65   sp: 233  >> Popped 7
+tick: 948  pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 949  pc: 62   sp: 235  >> Popped 7
+tick: 950  pc: 63   sp: 236  >> Popped 0
+tick: 951  pc: 64   sp: 237  >> Popped 6
+tick: 952  pc: 65   sp: 238  >> Popped 7
+tick: 953  pc: 66   sp: 239  >> sp is currently: 20
+ret to @32
+tick: 954  pc: 32   sp: 240  >> Popped 6
+tick: 955  pc: 33   sp: 241  >> Popped 0
+tick: 956  pc: 34   sp: 242  >> Popped 4
+tick: 957  pc: 35   sp: 243  >> Popped 7
+tick: 958  pc: 36   sp: 244  >> sp is currently: 1c
+ret to @28
+tick: 959  pc: 28   sp: 245  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 960  pc: 29   sp: 245  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 961  pc: 30   sp: 245  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 962  pc: 31   sp: 245  >> rcall to @37 [low_param:4 high_param:7]
+tick: 963  pc: 37   sp: 244  >> Pushed 7
+tick: 964  pc: 38   sp: 243  >> Pushed 4
+tick: 965  pc: 39   sp: 242  >> Pushed 0
+tick: 966  pc: 40   sp: 241  >> Pushed 6
+tick: 967  pc: 41   sp: 240  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 968  pc: 42   sp: 240  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 969  pc: 43   sp: 240  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 970  pc: 44   sp: 240  >> sub $r9 3 <= $r6 7 - $r10 4
+tick: 971  pc: 45   sp: 240  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 972  pc: 46   sp: 240  >> add $r12 11 <= $r10 4 + $r6 7
+tick: 973  pc: 47   sp: 240  >> 5 <= 11/2
+tick: 974  pc: 48   sp: 240  >> add $r12 6 <= $r12 5 + $r1 1
+tick: 975  pc: 49   sp: 240  >> False <= 4 eq 1; beq, not jumping
+tick: 976  pc: 50   sp: 240  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 977  pc: 51   sp: 240  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 978  pc: 52   sp: 240  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 979  pc: 53   sp: 240  >> rcall to @67 [low_param:4 high_param:7]
+tick: 980  pc: 67   sp: 239  >> Pushed 7
+tick: 981  pc: 68   sp: 238  >> Pushed 4
+tick: 982  pc: 69   sp: 237  >> Pushed 0
+tick: 983  pc: 70   sp: 236  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 984  pc: 71   sp: 236  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 985  pc: 72   sp: 236  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 986  pc: 73   sp: 236  >> sub $r9 3 <= $r6 7 - $r10 4
+tick: 987  pc: 74   sp: 236  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 988  pc: 75   sp: 236  >> add $r5 4 <= $r9 4 + $r0 0
+tick: 989  pc: 76   sp: 236  >> 2 <= 4/2
+tick: 990  pc: 77   sp: 236  >> add $r8 4 <= $r10 4 + $r0 0
+tick: 991  pc: 78   sp: 236  >> ld $r13 <= mem(4)
+tick: 992  pc: 79   sp: 236  >> add $r2 6 <= $r8 4 + $r5 2
+tick: 993  pc: 80   sp: 236  >> ld $r14 <= mem(6)
+tick: 994  pc: 81   sp: 236  >> 10 < 4 is False. $r2 <= 0
+tick: 995  pc: 82   sp: 236  >> True <= 0 eq 0; bne, not jumping
+tick: 996  pc: 83   sp: 236  >> add $r2 6 <= $r8 4 + $r5 2
+tick: 997  pc: 84   sp: 236  >> st mem(6) <= $r13
+tick: 998  pc: 85   sp: 236  >> st mem(4) <= $r14
+tick: 999  pc: 86   sp: 236  >> add $r8 5 <= $r8 4 + $r1 1
+tick: 1000 pc: 87   sp: 236  >> add $r15 6 <= $r10 4 + $r5 2
+tick: 1001 pc: 88   sp: 236  >> 5 < 6 is True. $r2 <= 1
+tick: 1002 pc: 89   sp: 236  >> False <= 1 eq 0; beq, not jumping
+tick: 1003 pc: 90   sp: 236  >> Jumping to @78
+tick: 1004 pc: 78   sp: 236  >> ld $r13 <= mem(5)
+tick: 1005 pc: 79   sp: 236  >> add $r2 7 <= $r8 5 + $r5 2
+tick: 1006 pc: 80   sp: 236  >> ld $r14 <= mem(7)
+tick: 1007 pc: 81   sp: 236  >> 4 < 155 is True. $r2 <= 1
+tick: 1008 pc: 82   sp: 236  >> False <= 1 eq 0; bne, jumping to 86
+tick: 1009 pc: 86   sp: 236  >> add $r8 6 <= $r8 5 + $r1 1
+tick: 1010 pc: 87   sp: 236  >> add $r15 6 <= $r10 4 + $r5 2
+tick: 1011 pc: 88   sp: 236  >> 6 < 6 is False. $r2 <= 0
+tick: 1012 pc: 89   sp: 236  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1013 pc: 91   sp: 236  >> Popped 0
+tick: 1014 pc: 92   sp: 237  >> Popped 4
+tick: 1015 pc: 93   sp: 238  >> Popped 7
+tick: 1016 pc: 94   sp: 239  >> sp is currently: 36
+ret to @54
+tick: 1017 pc: 54   sp: 240  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1018 pc: 55   sp: 240  >> sub $r7 5 <= $r12 6 - $r1 1
+tick: 1019 pc: 56   sp: 240  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1020 pc: 57   sp: 240  >> rcall to @37 [low_param:4 high_param:5]
+tick: 1021 pc: 37   sp: 239  >> Pushed 7
+tick: 1022 pc: 38   sp: 238  >> Pushed 4
+tick: 1023 pc: 39   sp: 237  >> Pushed 0
+tick: 1024 pc: 40   sp: 236  >> Pushed 6
+tick: 1025 pc: 41   sp: 235  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1026 pc: 42   sp: 235  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 1027 pc: 43   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1028 pc: 44   sp: 235  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 1029 pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1030 pc: 46   sp: 235  >> add $r12 9 <= $r10 4 + $r6 5
+tick: 1031 pc: 47   sp: 235  >> 4 <= 9/2
+tick: 1032 pc: 48   sp: 235  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 1033 pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 1034 pc: 50   sp: 235  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1035 pc: 51   sp: 235  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 1036 pc: 52   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1037 pc: 53   sp: 235  >> rcall to @67 [low_param:4 high_param:5]
+tick: 1038 pc: 67   sp: 234  >> Pushed 5
+tick: 1039 pc: 68   sp: 233  >> Pushed 4
+tick: 1040 pc: 69   sp: 232  >> Pushed 0
+tick: 1041 pc: 70   sp: 231  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1042 pc: 71   sp: 231  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 1043 pc: 72   sp: 231  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1044 pc: 73   sp: 231  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 1045 pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1046 pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 1047 pc: 76   sp: 231  >> 1 <= 2/2
+tick: 1048 pc: 77   sp: 231  >> add $r8 4 <= $r10 4 + $r0 0
+tick: 1049 pc: 78   sp: 231  >> ld $r13 <= mem(4)
+tick: 1050 pc: 79   sp: 231  >> add $r2 5 <= $r8 4 + $r5 1
+tick: 1051 pc: 80   sp: 231  >> ld $r14 <= mem(5)
+tick: 1052 pc: 81   sp: 231  >> 155 < 10 is False. $r2 <= 0
+tick: 1053 pc: 82   sp: 231  >> True <= 0 eq 0; bne, not jumping
+tick: 1054 pc: 83   sp: 231  >> add $r2 5 <= $r8 4 + $r5 1
+tick: 1055 pc: 84   sp: 231  >> st mem(5) <= $r13
+tick: 1056 pc: 85   sp: 231  >> st mem(4) <= $r14
+tick: 1057 pc: 86   sp: 231  >> add $r8 5 <= $r8 4 + $r1 1
+tick: 1058 pc: 87   sp: 231  >> add $r15 5 <= $r10 4 + $r5 1
+tick: 1059 pc: 88   sp: 231  >> 5 < 5 is False. $r2 <= 0
+tick: 1060 pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1061 pc: 91   sp: 231  >> Popped 0
+tick: 1062 pc: 92   sp: 232  >> Popped 4
+tick: 1063 pc: 93   sp: 233  >> Popped 5
+tick: 1064 pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 1065 pc: 54   sp: 235  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1066 pc: 55   sp: 235  >> sub $r7 4 <= $r12 5 - $r1 1
+tick: 1067 pc: 56   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1068 pc: 57   sp: 235  >> rcall to @37 [low_param:4 high_param:4]
+tick: 1069 pc: 37   sp: 234  >> Pushed 5
+tick: 1070 pc: 38   sp: 233  >> Pushed 4
+tick: 1071 pc: 39   sp: 232  >> Pushed 0
+tick: 1072 pc: 40   sp: 231  >> Pushed 5
+tick: 1073 pc: 41   sp: 230  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1074 pc: 42   sp: 230  >> add $r6 4 <= $r7 4 + $r0 0
+tick: 1075 pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1076 pc: 44   sp: 230  >> sub $r9 0 <= $r6 4 - $r10 4
+tick: 1077 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1078 pc: 46   sp: 230  >> add $r12 8 <= $r10 4 + $r6 4
+tick: 1079 pc: 47   sp: 230  >> 4 <= 8/2
+tick: 1080 pc: 48   sp: 230  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 1081 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1082 pc: 62   sp: 230  >> Popped 5
+tick: 1083 pc: 63   sp: 231  >> Popped 0
+tick: 1084 pc: 64   sp: 232  >> Popped 4
+tick: 1085 pc: 65   sp: 233  >> Popped 5
+tick: 1086 pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 1087 pc: 58   sp: 235  >> add $r11 5 <= $r12 5 + $r0 0
+tick: 1088 pc: 59   sp: 235  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 1089 pc: 60   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1090 pc: 61   sp: 235  >> rcall to @37 [low_param:5 high_param:5]
+tick: 1091 pc: 37   sp: 234  >> Pushed 5
+tick: 1092 pc: 38   sp: 233  >> Pushed 4
+tick: 1093 pc: 39   sp: 232  >> Pushed 0
+tick: 1094 pc: 40   sp: 231  >> Pushed 5
+tick: 1095 pc: 41   sp: 230  >> add $r10 5 <= $r11 5 + $r0 0
+tick: 1096 pc: 42   sp: 230  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 1097 pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1098 pc: 44   sp: 230  >> sub $r9 0 <= $r6 5 - $r10 5
+tick: 1099 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1100 pc: 46   sp: 230  >> add $r12 10 <= $r10 5 + $r6 5
+tick: 1101 pc: 47   sp: 230  >> 5 <= 10/2
+tick: 1102 pc: 48   sp: 230  >> add $r12 6 <= $r12 5 + $r1 1
+tick: 1103 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1104 pc: 62   sp: 230  >> Popped 5
+tick: 1105 pc: 63   sp: 231  >> Popped 0
+tick: 1106 pc: 64   sp: 232  >> Popped 4
+tick: 1107 pc: 65   sp: 233  >> Popped 5
+tick: 1108 pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 1109 pc: 62   sp: 235  >> Popped 6
+tick: 1110 pc: 63   sp: 236  >> Popped 0
+tick: 1111 pc: 64   sp: 237  >> Popped 4
+tick: 1112 pc: 65   sp: 238  >> Popped 7
+tick: 1113 pc: 66   sp: 239  >> sp is currently: 3a
+ret to @58
+tick: 1114 pc: 58   sp: 240  >> add $r11 6 <= $r12 6 + $r0 0
+tick: 1115 pc: 59   sp: 240  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1116 pc: 60   sp: 240  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1117 pc: 61   sp: 240  >> rcall to @37 [low_param:6 high_param:7]
+tick: 1118 pc: 37   sp: 239  >> Pushed 7
+tick: 1119 pc: 38   sp: 238  >> Pushed 4
+tick: 1120 pc: 39   sp: 237  >> Pushed 0
+tick: 1121 pc: 40   sp: 236  >> Pushed 6
+tick: 1122 pc: 41   sp: 235  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 1123 pc: 42   sp: 235  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1124 pc: 43   sp: 235  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1125 pc: 44   sp: 235  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 1126 pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1127 pc: 46   sp: 235  >> add $r12 13 <= $r10 6 + $r6 7
+tick: 1128 pc: 47   sp: 235  >> 6 <= 13/2
+tick: 1129 pc: 48   sp: 235  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 1130 pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 1131 pc: 50   sp: 235  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 1132 pc: 51   sp: 235  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1133 pc: 52   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1134 pc: 53   sp: 235  >> rcall to @67 [low_param:6 high_param:7]
+tick: 1135 pc: 67   sp: 234  >> Pushed 7
+tick: 1136 pc: 68   sp: 233  >> Pushed 6
+tick: 1137 pc: 69   sp: 232  >> Pushed 0
+tick: 1138 pc: 70   sp: 231  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 1139 pc: 71   sp: 231  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1140 pc: 72   sp: 231  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1141 pc: 73   sp: 231  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 1142 pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1143 pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 1144 pc: 76   sp: 231  >> 1 <= 2/2
+tick: 1145 pc: 77   sp: 231  >> add $r8 6 <= $r10 6 + $r0 0
+tick: 1146 pc: 78   sp: 231  >> ld $r13 <= mem(6)
+tick: 1147 pc: 79   sp: 231  >> add $r2 7 <= $r8 6 + $r5 1
+tick: 1148 pc: 80   sp: 231  >> ld $r14 <= mem(7)
+tick: 1149 pc: 81   sp: 231  >> 4 < 4 is False. $r2 <= 0
+tick: 1150 pc: 82   sp: 231  >> True <= 0 eq 0; bne, not jumping
+tick: 1151 pc: 83   sp: 231  >> add $r2 7 <= $r8 6 + $r5 1
+tick: 1152 pc: 84   sp: 231  >> st mem(7) <= $r13
+tick: 1153 pc: 85   sp: 231  >> st mem(6) <= $r14
+tick: 1154 pc: 86   sp: 231  >> add $r8 7 <= $r8 6 + $r1 1
+tick: 1155 pc: 87   sp: 231  >> add $r15 7 <= $r10 6 + $r5 1
+tick: 1156 pc: 88   sp: 231  >> 7 < 7 is False. $r2 <= 0
+tick: 1157 pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1158 pc: 91   sp: 231  >> Popped 0
+tick: 1159 pc: 92   sp: 232  >> Popped 6
+tick: 1160 pc: 93   sp: 233  >> Popped 7
+tick: 1161 pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 1162 pc: 54   sp: 235  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 1163 pc: 55   sp: 235  >> sub $r7 6 <= $r12 7 - $r1 1
+tick: 1164 pc: 56   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1165 pc: 57   sp: 235  >> rcall to @37 [low_param:6 high_param:6]
+tick: 1166 pc: 37   sp: 234  >> Pushed 7
+tick: 1167 pc: 38   sp: 233  >> Pushed 6
+tick: 1168 pc: 39   sp: 232  >> Pushed 0
+tick: 1169 pc: 40   sp: 231  >> Pushed 7
+tick: 1170 pc: 41   sp: 230  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 1171 pc: 42   sp: 230  >> add $r6 6 <= $r7 6 + $r0 0
+tick: 1172 pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1173 pc: 44   sp: 230  >> sub $r9 0 <= $r6 6 - $r10 6
+tick: 1174 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1175 pc: 46   sp: 230  >> add $r12 12 <= $r10 6 + $r6 6
+tick: 1176 pc: 47   sp: 230  >> 6 <= 12/2
+tick: 1177 pc: 48   sp: 230  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 1178 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1179 pc: 62   sp: 230  >> Popped 7
+tick: 1180 pc: 63   sp: 231  >> Popped 0
+tick: 1181 pc: 64   sp: 232  >> Popped 6
+tick: 1182 pc: 65   sp: 233  >> Popped 7
+tick: 1183 pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 1184 pc: 58   sp: 235  >> add $r11 7 <= $r12 7 + $r0 0
+tick: 1185 pc: 59   sp: 235  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1186 pc: 60   sp: 235  >> add $r4 0 <= $r3 0 + $r0 0
+tick: 1187 pc: 61   sp: 235  >> rcall to @37 [low_param:7 high_param:7]
+tick: 1188 pc: 37   sp: 234  >> Pushed 7
+tick: 1189 pc: 38   sp: 233  >> Pushed 6
+tick: 1190 pc: 39   sp: 232  >> Pushed 0
+tick: 1191 pc: 40   sp: 231  >> Pushed 7
+tick: 1192 pc: 41   sp: 230  >> add $r10 7 <= $r11 7 + $r0 0
+tick: 1193 pc: 42   sp: 230  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1194 pc: 43   sp: 230  >> add $r3 0 <= $r4 0 + $r0 0
+tick: 1195 pc: 44   sp: 230  >> sub $r9 0 <= $r6 7 - $r10 7
+tick: 1196 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1197 pc: 46   sp: 230  >> add $r12 14 <= $r10 7 + $r6 7
+tick: 1198 pc: 47   sp: 230  >> 7 <= 14/2
+tick: 1199 pc: 48   sp: 230  >> add $r12 8 <= $r12 7 + $r1 1
+tick: 1200 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1201 pc: 62   sp: 230  >> Popped 7
+tick: 1202 pc: 63   sp: 231  >> Popped 0
+tick: 1203 pc: 64   sp: 232  >> Popped 6
+tick: 1204 pc: 65   sp: 233  >> Popped 7
+tick: 1205 pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 1206 pc: 62   sp: 235  >> Popped 6
+tick: 1207 pc: 63   sp: 236  >> Popped 0
+tick: 1208 pc: 64   sp: 237  >> Popped 4
+tick: 1209 pc: 65   sp: 238  >> Popped 7
+tick: 1210 pc: 66   sp: 239  >> sp is currently: 3e
+ret to @62
+tick: 1211 pc: 62   sp: 240  >> Popped 6
+tick: 1212 pc: 63   sp: 241  >> Popped 0
+tick: 1213 pc: 64   sp: 242  >> Popped 4
+tick: 1214 pc: 65   sp: 243  >> Popped 7
+tick: 1215 pc: 66   sp: 244  >> sp is currently: 20
+ret to @32
+tick: 1216 pc: 32   sp: 245  >> Popped 4
+tick: 1217 pc: 33   sp: 246  >> Popped 1
+tick: 1218 pc: 34   sp: 247  >> Popped 0
+tick: 1219 pc: 35   sp: 248  >> Popped 7
+tick: 1220 pc: 36   sp: 249  >> sp is currently: 1c
+ret to @28
+tick: 1221 pc: 28   sp: 250  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1222 pc: 29   sp: 250  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1223 pc: 30   sp: 250  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1224 pc: 31   sp: 250  >> rcall to @37 [low_param:0 high_param:7]
+tick: 1225 pc: 37   sp: 249  >> Pushed 7
+tick: 1226 pc: 38   sp: 248  >> Pushed 0
+tick: 1227 pc: 39   sp: 247  >> Pushed 1
+tick: 1228 pc: 40   sp: 246  >> Pushed 4
+tick: 1229 pc: 41   sp: 245  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1230 pc: 42   sp: 245  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1231 pc: 43   sp: 245  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1232 pc: 44   sp: 245  >> sub $r9 7 <= $r6 7 - $r10 0
+tick: 1233 pc: 45   sp: 245  >> add $r9 8 <= $r9 7 + $r1 1
+tick: 1234 pc: 46   sp: 245  >> add $r12 7 <= $r10 0 + $r6 7
+tick: 1235 pc: 47   sp: 245  >> 3 <= 7/2
+tick: 1236 pc: 48   sp: 245  >> add $r12 4 <= $r12 3 + $r1 1
+tick: 1237 pc: 49   sp: 245  >> False <= 8 eq 1; beq, not jumping
+tick: 1238 pc: 50   sp: 245  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1239 pc: 51   sp: 245  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1240 pc: 52   sp: 245  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1241 pc: 53   sp: 245  >> rcall to @67 [low_param:0 high_param:7]
+tick: 1242 pc: 67   sp: 244  >> Pushed 7
+tick: 1243 pc: 68   sp: 243  >> Pushed 0
+tick: 1244 pc: 69   sp: 242  >> Pushed 1
+tick: 1245 pc: 70   sp: 241  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1246 pc: 71   sp: 241  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1247 pc: 72   sp: 241  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1248 pc: 73   sp: 241  >> sub $r9 7 <= $r6 7 - $r10 0
+tick: 1249 pc: 74   sp: 241  >> add $r9 8 <= $r9 7 + $r1 1
+tick: 1250 pc: 75   sp: 241  >> add $r5 8 <= $r9 8 + $r0 0
+tick: 1251 pc: 76   sp: 241  >> 4 <= 8/2
+tick: 1252 pc: 77   sp: 241  >> add $r8 0 <= $r10 0 + $r0 0
+tick: 1253 pc: 78   sp: 241  >> ld $r13 <= mem(0)
+tick: 1254 pc: 79   sp: 241  >> add $r2 4 <= $r8 0 + $r5 4
+tick: 1255 pc: 80   sp: 241  >> ld $r14 <= mem(4)
+tick: 1256 pc: 81   sp: 241  >> 155 < 3 is False. $r2 <= 0
+tick: 1257 pc: 82   sp: 241  >> False <= 0 eq 1; bne, jumping to 86
+tick: 1258 pc: 86   sp: 241  >> add $r8 1 <= $r8 0 + $r1 1
+tick: 1259 pc: 87   sp: 241  >> add $r15 4 <= $r10 0 + $r5 4
+tick: 1260 pc: 88   sp: 241  >> 1 < 4 is True. $r2 <= 1
+tick: 1261 pc: 89   sp: 241  >> False <= 1 eq 0; beq, not jumping
+tick: 1262 pc: 90   sp: 241  >> Jumping to @78
+tick: 1263 pc: 78   sp: 241  >> ld $r13 <= mem(1)
+tick: 1264 pc: 79   sp: 241  >> add $r2 5 <= $r8 1 + $r5 4
+tick: 1265 pc: 80   sp: 241  >> ld $r14 <= mem(5)
+tick: 1266 pc: 81   sp: 241  >> 10 < 16 is True. $r2 <= 1
+tick: 1267 pc: 82   sp: 241  >> True <= 1 eq 1; bne, not jumping
+tick: 1268 pc: 83   sp: 241  >> add $r2 5 <= $r8 1 + $r5 4
+tick: 1269 pc: 84   sp: 241  >> st mem(5) <= $r13
+tick: 1270 pc: 85   sp: 241  >> st mem(1) <= $r14
+tick: 1271 pc: 86   sp: 241  >> add $r8 2 <= $r8 1 + $r1 1
+tick: 1272 pc: 87   sp: 241  >> add $r15 4 <= $r10 0 + $r5 4
+tick: 1273 pc: 88   sp: 241  >> 2 < 4 is True. $r2 <= 1
+tick: 1274 pc: 89   sp: 241  >> False <= 1 eq 0; beq, not jumping
+tick: 1275 pc: 90   sp: 241  >> Jumping to @78
+tick: 1276 pc: 78   sp: 241  >> ld $r13 <= mem(2)
+tick: 1277 pc: 79   sp: 241  >> add $r2 6 <= $r8 2 + $r5 4
+tick: 1278 pc: 80   sp: 241  >> ld $r14 <= mem(6)
+tick: 1279 pc: 81   sp: 241  >> 4 < 32 is True. $r2 <= 1
+tick: 1280 pc: 82   sp: 241  >> True <= 1 eq 1; bne, not jumping
+tick: 1281 pc: 83   sp: 241  >> add $r2 6 <= $r8 2 + $r5 4
+tick: 1282 pc: 84   sp: 241  >> st mem(6) <= $r13
+tick: 1283 pc: 85   sp: 241  >> st mem(2) <= $r14
+tick: 1284 pc: 86   sp: 241  >> add $r8 3 <= $r8 2 + $r1 1
+tick: 1285 pc: 87   sp: 241  >> add $r15 4 <= $r10 0 + $r5 4
+tick: 1286 pc: 88   sp: 241  >> 3 < 4 is True. $r2 <= 1
+tick: 1287 pc: 89   sp: 241  >> False <= 1 eq 0; beq, not jumping
+tick: 1288 pc: 90   sp: 241  >> Jumping to @78
+tick: 1289 pc: 78   sp: 241  >> ld $r13 <= mem(3)
+tick: 1290 pc: 79   sp: 241  >> add $r2 7 <= $r8 3 + $r5 4
+tick: 1291 pc: 80   sp: 241  >> ld $r14 <= mem(7)
+tick: 1292 pc: 81   sp: 241  >> 4 < 2560 is True. $r2 <= 1
+tick: 1293 pc: 82   sp: 241  >> True <= 1 eq 1; bne, not jumping
+tick: 1294 pc: 83   sp: 241  >> add $r2 7 <= $r8 3 + $r5 4
+tick: 1295 pc: 84   sp: 241  >> st mem(7) <= $r13
+tick: 1296 pc: 85   sp: 241  >> st mem(3) <= $r14
+tick: 1297 pc: 86   sp: 241  >> add $r8 4 <= $r8 3 + $r1 1
+tick: 1298 pc: 87   sp: 241  >> add $r15 4 <= $r10 0 + $r5 4
+tick: 1299 pc: 88   sp: 241  >> 4 < 4 is False. $r2 <= 0
+tick: 1300 pc: 89   sp: 241  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1301 pc: 91   sp: 241  >> Popped 1
+tick: 1302 pc: 92   sp: 242  >> Popped 0
+tick: 1303 pc: 93   sp: 243  >> Popped 7
+tick: 1304 pc: 94   sp: 244  >> sp is currently: 36
+ret to @54
+tick: 1305 pc: 54   sp: 245  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1306 pc: 55   sp: 245  >> sub $r7 3 <= $r12 4 - $r1 1
+tick: 1307 pc: 56   sp: 245  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1308 pc: 57   sp: 245  >> rcall to @37 [low_param:0 high_param:3]
+tick: 1309 pc: 37   sp: 244  >> Pushed 7
+tick: 1310 pc: 38   sp: 243  >> Pushed 0
+tick: 1311 pc: 39   sp: 242  >> Pushed 1
+tick: 1312 pc: 40   sp: 241  >> Pushed 4
+tick: 1313 pc: 41   sp: 240  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1314 pc: 42   sp: 240  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 1315 pc: 43   sp: 240  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1316 pc: 44   sp: 240  >> sub $r9 3 <= $r6 3 - $r10 0
+tick: 1317 pc: 45   sp: 240  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 1318 pc: 46   sp: 240  >> add $r12 3 <= $r10 0 + $r6 3
+tick: 1319 pc: 47   sp: 240  >> 1 <= 3/2
+tick: 1320 pc: 48   sp: 240  >> add $r12 2 <= $r12 1 + $r1 1
+tick: 1321 pc: 49   sp: 240  >> False <= 4 eq 1; beq, not jumping
+tick: 1322 pc: 50   sp: 240  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1323 pc: 51   sp: 240  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 1324 pc: 52   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1325 pc: 53   sp: 240  >> rcall to @67 [low_param:0 high_param:3]
+tick: 1326 pc: 67   sp: 239  >> Pushed 3
+tick: 1327 pc: 68   sp: 238  >> Pushed 0
+tick: 1328 pc: 69   sp: 237  >> Pushed 1
+tick: 1329 pc: 70   sp: 236  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1330 pc: 71   sp: 236  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 1331 pc: 72   sp: 236  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1332 pc: 73   sp: 236  >> sub $r9 3 <= $r6 3 - $r10 0
+tick: 1333 pc: 74   sp: 236  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 1334 pc: 75   sp: 236  >> add $r5 4 <= $r9 4 + $r0 0
+tick: 1335 pc: 76   sp: 236  >> 2 <= 4/2
+tick: 1336 pc: 77   sp: 236  >> add $r8 0 <= $r10 0 + $r0 0
+tick: 1337 pc: 78   sp: 236  >> ld $r13 <= mem(0)
+tick: 1338 pc: 79   sp: 236  >> add $r2 2 <= $r8 0 + $r5 2
+tick: 1339 pc: 80   sp: 236  >> ld $r14 <= mem(2)
+tick: 1340 pc: 81   sp: 236  >> 4 < 3 is False. $r2 <= 0
+tick: 1341 pc: 82   sp: 236  >> False <= 0 eq 1; bne, jumping to 86
+tick: 1342 pc: 86   sp: 236  >> add $r8 1 <= $r8 0 + $r1 1
+tick: 1343 pc: 87   sp: 236  >> add $r15 2 <= $r10 0 + $r5 2
+tick: 1344 pc: 88   sp: 236  >> 1 < 2 is True. $r2 <= 1
+tick: 1345 pc: 89   sp: 236  >> False <= 1 eq 0; beq, not jumping
+tick: 1346 pc: 90   sp: 236  >> Jumping to @78
+tick: 1347 pc: 78   sp: 236  >> ld $r13 <= mem(1)
+tick: 1348 pc: 79   sp: 236  >> add $r2 3 <= $r8 1 + $r5 2
+tick: 1349 pc: 80   sp: 236  >> ld $r14 <= mem(3)
+tick: 1350 pc: 81   sp: 236  >> 4 < 10 is True. $r2 <= 1
+tick: 1351 pc: 82   sp: 236  >> True <= 1 eq 1; bne, not jumping
+tick: 1352 pc: 83   sp: 236  >> add $r2 3 <= $r8 1 + $r5 2
+tick: 1353 pc: 84   sp: 236  >> st mem(3) <= $r13
+tick: 1354 pc: 85   sp: 236  >> st mem(1) <= $r14
+tick: 1355 pc: 86   sp: 236  >> add $r8 2 <= $r8 1 + $r1 1
+tick: 1356 pc: 87   sp: 236  >> add $r15 2 <= $r10 0 + $r5 2
+tick: 1357 pc: 88   sp: 236  >> 2 < 2 is False. $r2 <= 0
+tick: 1358 pc: 89   sp: 236  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1359 pc: 91   sp: 236  >> Popped 1
+tick: 1360 pc: 92   sp: 237  >> Popped 0
+tick: 1361 pc: 93   sp: 238  >> Popped 3
+tick: 1362 pc: 94   sp: 239  >> sp is currently: 36
+ret to @54
+tick: 1363 pc: 54   sp: 240  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1364 pc: 55   sp: 240  >> sub $r7 1 <= $r12 2 - $r1 1
+tick: 1365 pc: 56   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1366 pc: 57   sp: 240  >> rcall to @37 [low_param:0 high_param:1]
+tick: 1367 pc: 37   sp: 239  >> Pushed 3
+tick: 1368 pc: 38   sp: 238  >> Pushed 0
+tick: 1369 pc: 39   sp: 237  >> Pushed 1
+tick: 1370 pc: 40   sp: 236  >> Pushed 2
+tick: 1371 pc: 41   sp: 235  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1372 pc: 42   sp: 235  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 1373 pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1374 pc: 44   sp: 235  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 1375 pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1376 pc: 46   sp: 235  >> add $r12 1 <= $r10 0 + $r6 1
+tick: 1377 pc: 47   sp: 235  >> 0 <= 1/2
+tick: 1378 pc: 48   sp: 235  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 1379 pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 1380 pc: 50   sp: 235  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1381 pc: 51   sp: 235  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 1382 pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1383 pc: 53   sp: 235  >> rcall to @67 [low_param:0 high_param:1]
+tick: 1384 pc: 67   sp: 234  >> Pushed 1
+tick: 1385 pc: 68   sp: 233  >> Pushed 0
+tick: 1386 pc: 69   sp: 232  >> Pushed 1
+tick: 1387 pc: 70   sp: 231  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1388 pc: 71   sp: 231  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 1389 pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1390 pc: 73   sp: 231  >> sub $r9 1 <= $r6 1 - $r10 0
+tick: 1391 pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1392 pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 1393 pc: 76   sp: 231  >> 1 <= 2/2
+tick: 1394 pc: 77   sp: 231  >> add $r8 0 <= $r10 0 + $r0 0
+tick: 1395 pc: 78   sp: 231  >> ld $r13 <= mem(0)
+tick: 1396 pc: 79   sp: 231  >> add $r2 1 <= $r8 0 + $r5 1
+tick: 1397 pc: 80   sp: 231  >> ld $r14 <= mem(1)
+tick: 1398 pc: 81   sp: 231  >> 4 < 3 is False. $r2 <= 0
+tick: 1399 pc: 82   sp: 231  >> False <= 0 eq 1; bne, jumping to 86
+tick: 1400 pc: 86   sp: 231  >> add $r8 1 <= $r8 0 + $r1 1
+tick: 1401 pc: 87   sp: 231  >> add $r15 1 <= $r10 0 + $r5 1
+tick: 1402 pc: 88   sp: 231  >> 1 < 1 is False. $r2 <= 0
+tick: 1403 pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1404 pc: 91   sp: 231  >> Popped 1
+tick: 1405 pc: 92   sp: 232  >> Popped 0
+tick: 1406 pc: 93   sp: 233  >> Popped 1
+tick: 1407 pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 1408 pc: 54   sp: 235  >> add $r11 0 <= $r10 0 + $r0 0
+tick: 1409 pc: 55   sp: 235  >> sub $r7 0 <= $r12 1 - $r1 1
+tick: 1410 pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1411 pc: 57   sp: 235  >> rcall to @37 [low_param:0 high_param:0]
+tick: 1412 pc: 37   sp: 234  >> Pushed 1
+tick: 1413 pc: 38   sp: 233  >> Pushed 0
+tick: 1414 pc: 39   sp: 232  >> Pushed 1
+tick: 1415 pc: 40   sp: 231  >> Pushed 1
+tick: 1416 pc: 41   sp: 230  >> add $r10 0 <= $r11 0 + $r0 0
+tick: 1417 pc: 42   sp: 230  >> add $r6 0 <= $r7 0 + $r0 0
+tick: 1418 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1419 pc: 44   sp: 230  >> sub $r9 0 <= $r6 0 - $r10 0
+tick: 1420 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1421 pc: 46   sp: 230  >> add $r12 0 <= $r10 0 + $r6 0
+tick: 1422 pc: 47   sp: 230  >> 0 <= 0/2
+tick: 1423 pc: 48   sp: 230  >> add $r12 1 <= $r12 0 + $r1 1
+tick: 1424 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1425 pc: 62   sp: 230  >> Popped 1
+tick: 1426 pc: 63   sp: 231  >> Popped 1
+tick: 1427 pc: 64   sp: 232  >> Popped 0
+tick: 1428 pc: 65   sp: 233  >> Popped 1
+tick: 1429 pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 1430 pc: 58   sp: 235  >> add $r11 1 <= $r12 1 + $r0 0
+tick: 1431 pc: 59   sp: 235  >> add $r7 1 <= $r6 1 + $r0 0
+tick: 1432 pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1433 pc: 61   sp: 235  >> rcall to @37 [low_param:1 high_param:1]
+tick: 1434 pc: 37   sp: 234  >> Pushed 1
+tick: 1435 pc: 38   sp: 233  >> Pushed 0
+tick: 1436 pc: 39   sp: 232  >> Pushed 1
+tick: 1437 pc: 40   sp: 231  >> Pushed 1
+tick: 1438 pc: 41   sp: 230  >> add $r10 1 <= $r11 1 + $r0 0
+tick: 1439 pc: 42   sp: 230  >> add $r6 1 <= $r7 1 + $r0 0
+tick: 1440 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1441 pc: 44   sp: 230  >> sub $r9 0 <= $r6 1 - $r10 1
+tick: 1442 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1443 pc: 46   sp: 230  >> add $r12 2 <= $r10 1 + $r6 1
+tick: 1444 pc: 47   sp: 230  >> 1 <= 2/2
+tick: 1445 pc: 48   sp: 230  >> add $r12 2 <= $r12 1 + $r1 1
+tick: 1446 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1447 pc: 62   sp: 230  >> Popped 1
+tick: 1448 pc: 63   sp: 231  >> Popped 1
+tick: 1449 pc: 64   sp: 232  >> Popped 0
+tick: 1450 pc: 65   sp: 233  >> Popped 1
+tick: 1451 pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 1452 pc: 62   sp: 235  >> Popped 2
+tick: 1453 pc: 63   sp: 236  >> Popped 1
+tick: 1454 pc: 64   sp: 237  >> Popped 0
+tick: 1455 pc: 65   sp: 238  >> Popped 3
+tick: 1456 pc: 66   sp: 239  >> sp is currently: 3a
+ret to @58
+tick: 1457 pc: 58   sp: 240  >> add $r11 2 <= $r12 2 + $r0 0
+tick: 1458 pc: 59   sp: 240  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 1459 pc: 60   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1460 pc: 61   sp: 240  >> rcall to @37 [low_param:2 high_param:3]
+tick: 1461 pc: 37   sp: 239  >> Pushed 3
+tick: 1462 pc: 38   sp: 238  >> Pushed 0
+tick: 1463 pc: 39   sp: 237  >> Pushed 1
+tick: 1464 pc: 40   sp: 236  >> Pushed 2
+tick: 1465 pc: 41   sp: 235  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 1466 pc: 42   sp: 235  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 1467 pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1468 pc: 44   sp: 235  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 1469 pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1470 pc: 46   sp: 235  >> add $r12 5 <= $r10 2 + $r6 3
+tick: 1471 pc: 47   sp: 235  >> 2 <= 5/2
+tick: 1472 pc: 48   sp: 235  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 1473 pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 1474 pc: 50   sp: 235  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 1475 pc: 51   sp: 235  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 1476 pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1477 pc: 53   sp: 235  >> rcall to @67 [low_param:2 high_param:3]
+tick: 1478 pc: 67   sp: 234  >> Pushed 3
+tick: 1479 pc: 68   sp: 233  >> Pushed 2
+tick: 1480 pc: 69   sp: 232  >> Pushed 1
+tick: 1481 pc: 70   sp: 231  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 1482 pc: 71   sp: 231  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 1483 pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1484 pc: 73   sp: 231  >> sub $r9 1 <= $r6 3 - $r10 2
+tick: 1485 pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1486 pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 1487 pc: 76   sp: 231  >> 1 <= 2/2
+tick: 1488 pc: 77   sp: 231  >> add $r8 2 <= $r10 2 + $r0 0
+tick: 1489 pc: 78   sp: 231  >> ld $r13 <= mem(2)
+tick: 1490 pc: 79   sp: 231  >> add $r2 3 <= $r8 2 + $r5 1
+tick: 1491 pc: 80   sp: 231  >> ld $r14 <= mem(3)
+tick: 1492 pc: 81   sp: 231  >> 10 < 4 is False. $r2 <= 0
+tick: 1493 pc: 82   sp: 231  >> False <= 0 eq 1; bne, jumping to 86
+tick: 1494 pc: 86   sp: 231  >> add $r8 3 <= $r8 2 + $r1 1
+tick: 1495 pc: 87   sp: 231  >> add $r15 3 <= $r10 2 + $r5 1
+tick: 1496 pc: 88   sp: 231  >> 3 < 3 is False. $r2 <= 0
+tick: 1497 pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1498 pc: 91   sp: 231  >> Popped 1
+tick: 1499 pc: 92   sp: 232  >> Popped 2
+tick: 1500 pc: 93   sp: 233  >> Popped 3
+tick: 1501 pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 1502 pc: 54   sp: 235  >> add $r11 2 <= $r10 2 + $r0 0
+tick: 1503 pc: 55   sp: 235  >> sub $r7 2 <= $r12 3 - $r1 1
+tick: 1504 pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1505 pc: 57   sp: 235  >> rcall to @37 [low_param:2 high_param:2]
+tick: 1506 pc: 37   sp: 234  >> Pushed 3
+tick: 1507 pc: 38   sp: 233  >> Pushed 2
+tick: 1508 pc: 39   sp: 232  >> Pushed 1
+tick: 1509 pc: 40   sp: 231  >> Pushed 3
+tick: 1510 pc: 41   sp: 230  >> add $r10 2 <= $r11 2 + $r0 0
+tick: 1511 pc: 42   sp: 230  >> add $r6 2 <= $r7 2 + $r0 0
+tick: 1512 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1513 pc: 44   sp: 230  >> sub $r9 0 <= $r6 2 - $r10 2
+tick: 1514 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1515 pc: 46   sp: 230  >> add $r12 4 <= $r10 2 + $r6 2
+tick: 1516 pc: 47   sp: 230  >> 2 <= 4/2
+tick: 1517 pc: 48   sp: 230  >> add $r12 3 <= $r12 2 + $r1 1
+tick: 1518 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1519 pc: 62   sp: 230  >> Popped 3
+tick: 1520 pc: 63   sp: 231  >> Popped 1
+tick: 1521 pc: 64   sp: 232  >> Popped 2
+tick: 1522 pc: 65   sp: 233  >> Popped 3
+tick: 1523 pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 1524 pc: 58   sp: 235  >> add $r11 3 <= $r12 3 + $r0 0
+tick: 1525 pc: 59   sp: 235  >> add $r7 3 <= $r6 3 + $r0 0
+tick: 1526 pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1527 pc: 61   sp: 235  >> rcall to @37 [low_param:3 high_param:3]
+tick: 1528 pc: 37   sp: 234  >> Pushed 3
+tick: 1529 pc: 38   sp: 233  >> Pushed 2
+tick: 1530 pc: 39   sp: 232  >> Pushed 1
+tick: 1531 pc: 40   sp: 231  >> Pushed 3
+tick: 1532 pc: 41   sp: 230  >> add $r10 3 <= $r11 3 + $r0 0
+tick: 1533 pc: 42   sp: 230  >> add $r6 3 <= $r7 3 + $r0 0
+tick: 1534 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1535 pc: 44   sp: 230  >> sub $r9 0 <= $r6 3 - $r10 3
+tick: 1536 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1537 pc: 46   sp: 230  >> add $r12 6 <= $r10 3 + $r6 3
+tick: 1538 pc: 47   sp: 230  >> 3 <= 6/2
+tick: 1539 pc: 48   sp: 230  >> add $r12 4 <= $r12 3 + $r1 1
+tick: 1540 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1541 pc: 62   sp: 230  >> Popped 3
+tick: 1542 pc: 63   sp: 231  >> Popped 1
+tick: 1543 pc: 64   sp: 232  >> Popped 2
+tick: 1544 pc: 65   sp: 233  >> Popped 3
+tick: 1545 pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 1546 pc: 62   sp: 235  >> Popped 2
+tick: 1547 pc: 63   sp: 236  >> Popped 1
+tick: 1548 pc: 64   sp: 237  >> Popped 0
+tick: 1549 pc: 65   sp: 238  >> Popped 3
+tick: 1550 pc: 66   sp: 239  >> sp is currently: 3e
+ret to @62
+tick: 1551 pc: 62   sp: 240  >> Popped 4
+tick: 1552 pc: 63   sp: 241  >> Popped 1
+tick: 1553 pc: 64   sp: 242  >> Popped 0
+tick: 1554 pc: 65   sp: 243  >> Popped 7
+tick: 1555 pc: 66   sp: 244  >> sp is currently: 3a
+ret to @58
+tick: 1556 pc: 58   sp: 245  >> add $r11 4 <= $r12 4 + $r0 0
+tick: 1557 pc: 59   sp: 245  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1558 pc: 60   sp: 245  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1559 pc: 61   sp: 245  >> rcall to @37 [low_param:4 high_param:7]
+tick: 1560 pc: 37   sp: 244  >> Pushed 7
+tick: 1561 pc: 38   sp: 243  >> Pushed 0
+tick: 1562 pc: 39   sp: 242  >> Pushed 1
+tick: 1563 pc: 40   sp: 241  >> Pushed 4
+tick: 1564 pc: 41   sp: 240  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1565 pc: 42   sp: 240  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1566 pc: 43   sp: 240  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1567 pc: 44   sp: 240  >> sub $r9 3 <= $r6 7 - $r10 4
+tick: 1568 pc: 45   sp: 240  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 1569 pc: 46   sp: 240  >> add $r12 11 <= $r10 4 + $r6 7
+tick: 1570 pc: 47   sp: 240  >> 5 <= 11/2
+tick: 1571 pc: 48   sp: 240  >> add $r12 6 <= $r12 5 + $r1 1
+tick: 1572 pc: 49   sp: 240  >> False <= 4 eq 1; beq, not jumping
+tick: 1573 pc: 50   sp: 240  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1574 pc: 51   sp: 240  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1575 pc: 52   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1576 pc: 53   sp: 240  >> rcall to @67 [low_param:4 high_param:7]
+tick: 1577 pc: 67   sp: 239  >> Pushed 7
+tick: 1578 pc: 68   sp: 238  >> Pushed 4
+tick: 1579 pc: 69   sp: 237  >> Pushed 1
+tick: 1580 pc: 70   sp: 236  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1581 pc: 71   sp: 236  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1582 pc: 72   sp: 236  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1583 pc: 73   sp: 236  >> sub $r9 3 <= $r6 7 - $r10 4
+tick: 1584 pc: 74   sp: 236  >> add $r9 4 <= $r9 3 + $r1 1
+tick: 1585 pc: 75   sp: 236  >> add $r5 4 <= $r9 4 + $r0 0
+tick: 1586 pc: 76   sp: 236  >> 2 <= 4/2
+tick: 1587 pc: 77   sp: 236  >> add $r8 4 <= $r10 4 + $r0 0
+tick: 1588 pc: 78   sp: 236  >> ld $r13 <= mem(4)
+tick: 1589 pc: 79   sp: 236  >> add $r2 6 <= $r8 4 + $r5 2
+tick: 1590 pc: 80   sp: 236  >> ld $r14 <= mem(6)
+tick: 1591 pc: 81   sp: 236  >> 32 < 155 is True. $r2 <= 1
+tick: 1592 pc: 82   sp: 236  >> True <= 1 eq 1; bne, not jumping
+tick: 1593 pc: 83   sp: 236  >> add $r2 6 <= $r8 4 + $r5 2
+tick: 1594 pc: 84   sp: 236  >> st mem(6) <= $r13
+tick: 1595 pc: 85   sp: 236  >> st mem(4) <= $r14
+tick: 1596 pc: 86   sp: 236  >> add $r8 5 <= $r8 4 + $r1 1
+tick: 1597 pc: 87   sp: 236  >> add $r15 6 <= $r10 4 + $r5 2
+tick: 1598 pc: 88   sp: 236  >> 5 < 6 is True. $r2 <= 1
+tick: 1599 pc: 89   sp: 236  >> False <= 1 eq 0; beq, not jumping
+tick: 1600 pc: 90   sp: 236  >> Jumping to @78
+tick: 1601 pc: 78   sp: 236  >> ld $r13 <= mem(5)
+tick: 1602 pc: 79   sp: 236  >> add $r2 7 <= $r8 5 + $r5 2
+tick: 1603 pc: 80   sp: 236  >> ld $r14 <= mem(7)
+tick: 1604 pc: 81   sp: 236  >> 2560 < 16 is False. $r2 <= 0
+tick: 1605 pc: 82   sp: 236  >> False <= 0 eq 1; bne, jumping to 86
+tick: 1606 pc: 86   sp: 236  >> add $r8 6 <= $r8 5 + $r1 1
+tick: 1607 pc: 87   sp: 236  >> add $r15 6 <= $r10 4 + $r5 2
+tick: 1608 pc: 88   sp: 236  >> 6 < 6 is False. $r2 <= 0
+tick: 1609 pc: 89   sp: 236  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1610 pc: 91   sp: 236  >> Popped 1
+tick: 1611 pc: 92   sp: 237  >> Popped 4
+tick: 1612 pc: 93   sp: 238  >> Popped 7
+tick: 1613 pc: 94   sp: 239  >> sp is currently: 36
+ret to @54
+tick: 1614 pc: 54   sp: 240  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1615 pc: 55   sp: 240  >> sub $r7 5 <= $r12 6 - $r1 1
+tick: 1616 pc: 56   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1617 pc: 57   sp: 240  >> rcall to @37 [low_param:4 high_param:5]
+tick: 1618 pc: 37   sp: 239  >> Pushed 7
+tick: 1619 pc: 38   sp: 238  >> Pushed 4
+tick: 1620 pc: 39   sp: 237  >> Pushed 1
+tick: 1621 pc: 40   sp: 236  >> Pushed 6
+tick: 1622 pc: 41   sp: 235  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1623 pc: 42   sp: 235  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 1624 pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1625 pc: 44   sp: 235  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 1626 pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1627 pc: 46   sp: 235  >> add $r12 9 <= $r10 4 + $r6 5
+tick: 1628 pc: 47   sp: 235  >> 4 <= 9/2
+tick: 1629 pc: 48   sp: 235  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 1630 pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 1631 pc: 50   sp: 235  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1632 pc: 51   sp: 235  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 1633 pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1634 pc: 53   sp: 235  >> rcall to @67 [low_param:4 high_param:5]
+tick: 1635 pc: 67   sp: 234  >> Pushed 5
+tick: 1636 pc: 68   sp: 233  >> Pushed 4
+tick: 1637 pc: 69   sp: 232  >> Pushed 1
+tick: 1638 pc: 70   sp: 231  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1639 pc: 71   sp: 231  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 1640 pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1641 pc: 73   sp: 231  >> sub $r9 1 <= $r6 5 - $r10 4
+tick: 1642 pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1643 pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 1644 pc: 76   sp: 231  >> 1 <= 2/2
+tick: 1645 pc: 77   sp: 231  >> add $r8 4 <= $r10 4 + $r0 0
+tick: 1646 pc: 78   sp: 231  >> ld $r13 <= mem(4)
+tick: 1647 pc: 79   sp: 231  >> add $r2 5 <= $r8 4 + $r5 1
+tick: 1648 pc: 80   sp: 231  >> ld $r14 <= mem(5)
+tick: 1649 pc: 81   sp: 231  >> 16 < 32 is True. $r2 <= 1
+tick: 1650 pc: 82   sp: 231  >> True <= 1 eq 1; bne, not jumping
+tick: 1651 pc: 83   sp: 231  >> add $r2 5 <= $r8 4 + $r5 1
+tick: 1652 pc: 84   sp: 231  >> st mem(5) <= $r13
+tick: 1653 pc: 85   sp: 231  >> st mem(4) <= $r14
+tick: 1654 pc: 86   sp: 231  >> add $r8 5 <= $r8 4 + $r1 1
+tick: 1655 pc: 87   sp: 231  >> add $r15 5 <= $r10 4 + $r5 1
+tick: 1656 pc: 88   sp: 231  >> 5 < 5 is False. $r2 <= 0
+tick: 1657 pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1658 pc: 91   sp: 231  >> Popped 1
+tick: 1659 pc: 92   sp: 232  >> Popped 4
+tick: 1660 pc: 93   sp: 233  >> Popped 5
+tick: 1661 pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 1662 pc: 54   sp: 235  >> add $r11 4 <= $r10 4 + $r0 0
+tick: 1663 pc: 55   sp: 235  >> sub $r7 4 <= $r12 5 - $r1 1
+tick: 1664 pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1665 pc: 57   sp: 235  >> rcall to @37 [low_param:4 high_param:4]
+tick: 1666 pc: 37   sp: 234  >> Pushed 5
+tick: 1667 pc: 38   sp: 233  >> Pushed 4
+tick: 1668 pc: 39   sp: 232  >> Pushed 1
+tick: 1669 pc: 40   sp: 231  >> Pushed 5
+tick: 1670 pc: 41   sp: 230  >> add $r10 4 <= $r11 4 + $r0 0
+tick: 1671 pc: 42   sp: 230  >> add $r6 4 <= $r7 4 + $r0 0
+tick: 1672 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1673 pc: 44   sp: 230  >> sub $r9 0 <= $r6 4 - $r10 4
+tick: 1674 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1675 pc: 46   sp: 230  >> add $r12 8 <= $r10 4 + $r6 4
+tick: 1676 pc: 47   sp: 230  >> 4 <= 8/2
+tick: 1677 pc: 48   sp: 230  >> add $r12 5 <= $r12 4 + $r1 1
+tick: 1678 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1679 pc: 62   sp: 230  >> Popped 5
+tick: 1680 pc: 63   sp: 231  >> Popped 1
+tick: 1681 pc: 64   sp: 232  >> Popped 4
+tick: 1682 pc: 65   sp: 233  >> Popped 5
+tick: 1683 pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 1684 pc: 58   sp: 235  >> add $r11 5 <= $r12 5 + $r0 0
+tick: 1685 pc: 59   sp: 235  >> add $r7 5 <= $r6 5 + $r0 0
+tick: 1686 pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1687 pc: 61   sp: 235  >> rcall to @37 [low_param:5 high_param:5]
+tick: 1688 pc: 37   sp: 234  >> Pushed 5
+tick: 1689 pc: 38   sp: 233  >> Pushed 4
+tick: 1690 pc: 39   sp: 232  >> Pushed 1
+tick: 1691 pc: 40   sp: 231  >> Pushed 5
+tick: 1692 pc: 41   sp: 230  >> add $r10 5 <= $r11 5 + $r0 0
+tick: 1693 pc: 42   sp: 230  >> add $r6 5 <= $r7 5 + $r0 0
+tick: 1694 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1695 pc: 44   sp: 230  >> sub $r9 0 <= $r6 5 - $r10 5
+tick: 1696 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1697 pc: 46   sp: 230  >> add $r12 10 <= $r10 5 + $r6 5
+tick: 1698 pc: 47   sp: 230  >> 5 <= 10/2
+tick: 1699 pc: 48   sp: 230  >> add $r12 6 <= $r12 5 + $r1 1
+tick: 1700 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1701 pc: 62   sp: 230  >> Popped 5
+tick: 1702 pc: 63   sp: 231  >> Popped 1
+tick: 1703 pc: 64   sp: 232  >> Popped 4
+tick: 1704 pc: 65   sp: 233  >> Popped 5
+tick: 1705 pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 1706 pc: 62   sp: 235  >> Popped 6
+tick: 1707 pc: 63   sp: 236  >> Popped 1
+tick: 1708 pc: 64   sp: 237  >> Popped 4
+tick: 1709 pc: 65   sp: 238  >> Popped 7
+tick: 1710 pc: 66   sp: 239  >> sp is currently: 3a
+ret to @58
+tick: 1711 pc: 58   sp: 240  >> add $r11 6 <= $r12 6 + $r0 0
+tick: 1712 pc: 59   sp: 240  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1713 pc: 60   sp: 240  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1714 pc: 61   sp: 240  >> rcall to @37 [low_param:6 high_param:7]
+tick: 1715 pc: 37   sp: 239  >> Pushed 7
+tick: 1716 pc: 38   sp: 238  >> Pushed 4
+tick: 1717 pc: 39   sp: 237  >> Pushed 1
+tick: 1718 pc: 40   sp: 236  >> Pushed 6
+tick: 1719 pc: 41   sp: 235  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 1720 pc: 42   sp: 235  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1721 pc: 43   sp: 235  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1722 pc: 44   sp: 235  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 1723 pc: 45   sp: 235  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1724 pc: 46   sp: 235  >> add $r12 13 <= $r10 6 + $r6 7
+tick: 1725 pc: 47   sp: 235  >> 6 <= 13/2
+tick: 1726 pc: 48   sp: 235  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 1727 pc: 49   sp: 235  >> False <= 2 eq 1; beq, not jumping
+tick: 1728 pc: 50   sp: 235  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 1729 pc: 51   sp: 235  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1730 pc: 52   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1731 pc: 53   sp: 235  >> rcall to @67 [low_param:6 high_param:7]
+tick: 1732 pc: 67   sp: 234  >> Pushed 7
+tick: 1733 pc: 68   sp: 233  >> Pushed 6
+tick: 1734 pc: 69   sp: 232  >> Pushed 1
+tick: 1735 pc: 70   sp: 231  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 1736 pc: 71   sp: 231  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1737 pc: 72   sp: 231  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1738 pc: 73   sp: 231  >> sub $r9 1 <= $r6 7 - $r10 6
+tick: 1739 pc: 74   sp: 231  >> add $r9 2 <= $r9 1 + $r1 1
+tick: 1740 pc: 75   sp: 231  >> add $r5 2 <= $r9 2 + $r0 0
+tick: 1741 pc: 76   sp: 231  >> 1 <= 2/2
+tick: 1742 pc: 77   sp: 231  >> add $r8 6 <= $r10 6 + $r0 0
+tick: 1743 pc: 78   sp: 231  >> ld $r13 <= mem(6)
+tick: 1744 pc: 79   sp: 231  >> add $r2 7 <= $r8 6 + $r5 1
+tick: 1745 pc: 80   sp: 231  >> ld $r14 <= mem(7)
+tick: 1746 pc: 81   sp: 231  >> 2560 < 155 is False. $r2 <= 0
+tick: 1747 pc: 82   sp: 231  >> False <= 0 eq 1; bne, jumping to 86
+tick: 1748 pc: 86   sp: 231  >> add $r8 7 <= $r8 6 + $r1 1
+tick: 1749 pc: 87   sp: 231  >> add $r15 7 <= $r10 6 + $r5 1
+tick: 1750 pc: 88   sp: 231  >> 7 < 7 is False. $r2 <= 0
+tick: 1751 pc: 89   sp: 231  >> True <= 0 eq 0; beq, jumping to 91
+tick: 1752 pc: 91   sp: 231  >> Popped 1
+tick: 1753 pc: 92   sp: 232  >> Popped 6
+tick: 1754 pc: 93   sp: 233  >> Popped 7
+tick: 1755 pc: 94   sp: 234  >> sp is currently: 36
+ret to @54
+tick: 1756 pc: 54   sp: 235  >> add $r11 6 <= $r10 6 + $r0 0
+tick: 1757 pc: 55   sp: 235  >> sub $r7 6 <= $r12 7 - $r1 1
+tick: 1758 pc: 56   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1759 pc: 57   sp: 235  >> rcall to @37 [low_param:6 high_param:6]
+tick: 1760 pc: 37   sp: 234  >> Pushed 7
+tick: 1761 pc: 38   sp: 233  >> Pushed 6
+tick: 1762 pc: 39   sp: 232  >> Pushed 1
+tick: 1763 pc: 40   sp: 231  >> Pushed 7
+tick: 1764 pc: 41   sp: 230  >> add $r10 6 <= $r11 6 + $r0 0
+tick: 1765 pc: 42   sp: 230  >> add $r6 6 <= $r7 6 + $r0 0
+tick: 1766 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1767 pc: 44   sp: 230  >> sub $r9 0 <= $r6 6 - $r10 6
+tick: 1768 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1769 pc: 46   sp: 230  >> add $r12 12 <= $r10 6 + $r6 6
+tick: 1770 pc: 47   sp: 230  >> 6 <= 12/2
+tick: 1771 pc: 48   sp: 230  >> add $r12 7 <= $r12 6 + $r1 1
+tick: 1772 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1773 pc: 62   sp: 230  >> Popped 7
+tick: 1774 pc: 63   sp: 231  >> Popped 1
+tick: 1775 pc: 64   sp: 232  >> Popped 6
+tick: 1776 pc: 65   sp: 233  >> Popped 7
+tick: 1777 pc: 66   sp: 234  >> sp is currently: 3a
+ret to @58
+tick: 1778 pc: 58   sp: 235  >> add $r11 7 <= $r12 7 + $r0 0
+tick: 1779 pc: 59   sp: 235  >> add $r7 7 <= $r6 7 + $r0 0
+tick: 1780 pc: 60   sp: 235  >> add $r4 1 <= $r3 1 + $r0 0
+tick: 1781 pc: 61   sp: 235  >> rcall to @37 [low_param:7 high_param:7]
+tick: 1782 pc: 37   sp: 234  >> Pushed 7
+tick: 1783 pc: 38   sp: 233  >> Pushed 6
+tick: 1784 pc: 39   sp: 232  >> Pushed 1
+tick: 1785 pc: 40   sp: 231  >> Pushed 7
+tick: 1786 pc: 41   sp: 230  >> add $r10 7 <= $r11 7 + $r0 0
+tick: 1787 pc: 42   sp: 230  >> add $r6 7 <= $r7 7 + $r0 0
+tick: 1788 pc: 43   sp: 230  >> add $r3 1 <= $r4 1 + $r0 0
+tick: 1789 pc: 44   sp: 230  >> sub $r9 0 <= $r6 7 - $r10 7
+tick: 1790 pc: 45   sp: 230  >> add $r9 1 <= $r9 0 + $r1 1
+tick: 1791 pc: 46   sp: 230  >> add $r12 14 <= $r10 7 + $r6 7
+tick: 1792 pc: 47   sp: 230  >> 7 <= 14/2
+tick: 1793 pc: 48   sp: 230  >> add $r12 8 <= $r12 7 + $r1 1
+tick: 1794 pc: 49   sp: 230  >> True <= 1 eq 1; beq, jumping to 62
+tick: 1795 pc: 62   sp: 230  >> Popped 7
+tick: 1796 pc: 63   sp: 231  >> Popped 1
+tick: 1797 pc: 64   sp: 232  >> Popped 6
+tick: 1798 pc: 65   sp: 233  >> Popped 7
+tick: 1799 pc: 66   sp: 234  >> sp is currently: 3e
+ret to @62
+tick: 1800 pc: 62   sp: 235  >> Popped 6
+tick: 1801 pc: 63   sp: 236  >> Popped 1
+tick: 1802 pc: 64   sp: 237  >> Popped 4
+tick: 1803 pc: 65   sp: 238  >> Popped 7
+tick: 1804 pc: 66   sp: 239  >> sp is currently: 3e
+ret to @62
+tick: 1805 pc: 62   sp: 240  >> Popped 4
+tick: 1806 pc: 63   sp: 241  >> Popped 1
+tick: 1807 pc: 64   sp: 242  >> Popped 0
+tick: 1808 pc: 65   sp: 243  >> Popped 7
+tick: 1809 pc: 66   sp: 244  >> sp is currently: 3e
+ret to @62
+tick: 1810 pc: 62   sp: 245  >> Popped 4
+tick: 1811 pc: 63   sp: 246  >> Popped 1
+tick: 1812 pc: 64   sp: 247  >> Popped 0
+tick: 1813 pc: 65   sp: 248  >> Popped 7
+tick: 1814 pc: 66   sp: 249  >> sp is currently: 20
+ret to @32
+tick: 1815 pc: 32   sp: 250  >> Popped 0
+tick: 1816 pc: 33   sp: 251  >> Popped 0
+tick: 1817 pc: 34   sp: 252  >> Popped 0
+tick: 1818 pc: 35   sp: 253  >> Popped 0
+tick: 1819 pc: 36   sp: 254  >> sp is currently: 4
+ret to @4
+
+Assuming PC@4 is the end of the program.
+CPU halted.
+The stack reached a max size of: 230 (26)
+Look at all the sorted tags below!
+['0003', '0004', '0004', '000A', '0010', '0020', '009B', '0A00', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '0000', '7', '1', '6', '7', '3e', '6', '1', '4', '7', '3e', '4', '1', '0', '7', '3e', '4', '1', '0', '7', '20', 0, 0, 0, 0, '4', 0]

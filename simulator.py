@@ -65,10 +65,9 @@ while 0 <= pc < 256:
 
     elif (opcode == "1") or (opcode == "2"):
 
-        offset_reg = hex2int(insn[1])
+        rt_reg = hex2int(insn[1])
+        offset_reg = hex2int(insn[2])
         offset_val = hex2int(regfile[offset_reg])
-
-        rt_reg = hex2int(insn[2])
         memory_base_addr = 0
         # memory_base_addr = hex2int(insn[3])
 
@@ -93,12 +92,13 @@ while 0 <= pc < 256:
             # add
             regfile[rd_reg] = int2hex(rs_reg_val + rt_reg_val)
             #sys.stdout.write('$r{0} <= $r{1} + $r{2}'.format(rd_reg, rs_reg, rt_reg))
-            sys.stdout.write('add {0} <= {1} + {2}'.format(rs_reg_val + rt_reg_val, rs_reg_val, rt_reg_val))
+            sys.stdout.write('add {0} {1} <= {2} {3} + {4} {5}'.format("$r" + str(rd_reg), rs_reg_val + rt_reg_val, "$r" + str(rs_reg), rs_reg_val, "$r" + str(rt_reg), rt_reg_val))
         else:
             # sub
             regfile[rd_reg] = int2hex(rs_reg_val - rt_reg_val)
             #sys.stdout.write('$r{0} <= $r{1} - $r{2}'.format(rd_reg, rs_reg, rt_reg))
-            sys.stdout.write('sub {0} <= {1} - {2}'.format(rs_reg_val - rt_reg_val, rs_reg_val, rt_reg_val))
+            sys.stdout.write('sub {0} {1} <= {2} {3} - {4} {5}'.format("$r" + str(rd_reg), rs_reg_val - rt_reg_val, "$r" + str(rs_reg), rs_reg_val, "$r" + str(rt_reg), rt_reg_val))
+
 
     elif opcode == "5":
         pc_mux_override = True

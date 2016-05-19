@@ -74,7 +74,7 @@ with open('program.asm', 'r') as f:
             decoded = [opcode, hex_frmt[0], hex_frmt[1], hex_frmt[2]]
 
             if not len(l) == len(asm_frmt):
-                print("ABORT: Problem your program.asm")
+                print("ABORT: Problem your program.asm with the instruction: " + insn[0] + ". Check for missing fields.")
 
                 print(len(l) )
                 print(len(asm_frmt))
