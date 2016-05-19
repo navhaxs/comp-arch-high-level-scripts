@@ -1,10 +1,10 @@
 #!/bin/python3
 
-
+import sys
 import re
 
 table = {}
-asm_code = []   # asm instructions (the program)
+asm_code = []   # asm instructions (source file)
 regfile = []    # register "friendly" names
 jmpref = {}     # dictionary of label-address pairs
 hexout = []     # first pass of hex
@@ -159,6 +159,7 @@ with open('program.asm', 'r') as f:
                 #match them to asm_frmt
 
             hexout.append(decoded)
+            asm_code.append(line)
             print("\t" + str(hexout[insn_count]))
 
         insn_count += 1
@@ -207,7 +208,7 @@ print("\nFinal output:")
 
 i = 0
 for each in vhdlout:
-    print("var_insn_mem(" + str(i) + "):= X\"" + each + "\";")
+    sys.stdout.write("var_insn_mem(" + str(i) + "):= X\"" + each + "\"; -- " + str(i) + ": " + asm_code[i] + "\n")
     i += 1
 
 

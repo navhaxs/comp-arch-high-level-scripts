@@ -73,12 +73,12 @@ while 0 <= pc < 256:
 
         if opcode == "1":
             # ld
-            regfile[rt_reg] = data_mem[memory_base_addr + offset_val]
             sys.stdout.write("ld $r" + str(rt_reg) + " <= mem(" + str(memory_base_addr + offset_val) + ")")
+            regfile[rt_reg] = data_mem[memory_base_addr + offset_val]
         else:
             # st
-            data_mem[memory_base_addr + offset_val] = regfile[rt_reg]
             sys.stdout.write("st mem(" + str(memory_base_addr + offset_val) + ") <= $r" + str(rt_reg))
+            data_mem[memory_base_addr + offset_val] = regfile[rt_reg]
 
     elif (opcode == "3") or (opcode == "4"):
         rd_reg = hex2int(insn[3])

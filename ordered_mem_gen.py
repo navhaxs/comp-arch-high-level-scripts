@@ -6,7 +6,7 @@ import binascii
 # parameters
 MACHINE_BITNESS_MULTIPLIER = 2  # this is multiplied by 8
 MEMORY_SIZE = 256
-DATA_TAG_SIZE = 8 # N
+DATA_TAG_SIZE = 128 # N
 
 MAX_DIGITS = 1 + len(str(MEMORY_SIZE))
 

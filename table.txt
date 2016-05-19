@@ -1,6 +1,6 @@
 nop	0	0	0	0	""
-ld	1	$offset	$rt	memaddr_4b	"$offset,$rt,memaddr_4b"
-store	2	$offset	$rt	memaddr_4b	"$rs,$rt,memaddr_4b"
+ld	1	$rt	$offset	memaddr_4b	"$offset,$rt,memaddr_4b"
+store	2	$rt	$offset	memaddr_4b	"$offset,$rt,memaddr_4b"
 st	2	$offset	$rt	memaddr_4b	"$offset,$rt,memaddr_4b"
 add	3	$rs	$rt	$rd	"$rd,$rs,$rt"
 inc	3	$rd	1	$rd	"$rd"
