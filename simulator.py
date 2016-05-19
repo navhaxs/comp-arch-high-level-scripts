@@ -49,7 +49,7 @@ while 0 <= pc < 256:
 
     regfile[0] = "0"
     regfile[1] = "1"
-
+    
     pc_mux_override = False
 
     insn = insn_mem[pc]
@@ -65,20 +65,18 @@ while 0 <= pc < 256:
 
     elif (opcode == "1") or (opcode == "2"):
 
-        rt_reg = hex2int(insn[1])
-        offset_reg = hex2int(insn[2])
+        rt_reg = hex2int(insn[2]) # 7:4
+        offset_reg = hex2int(insn[1]) # 11:8
         offset_val = hex2int(regfile[offset_reg])
-        memory_base_addr = 0
-        # memory_base_addr = hex2int(insn[3])
-
+                
         if opcode == "1":
             # ld
-            sys.stdout.write("ld $r" + str(rt_reg) + " <= mem(" + str(memory_base_addr + offset_val) + ")")
-            regfile[rt_reg] = data_mem[memory_base_addr + offset_val]
+            sys.stdout.write("ld $r" + str(rt_reg) + " <= mem(" + str(offset_val) + ")")
+            regfile[rt_reg] = data_mem[offset_val]
         else:
             # st
-            sys.stdout.write("st mem(" + str(memory_base_addr + offset_val) + ") <= $r" + str(rt_reg))
-            data_mem[memory_base_addr + offset_val] = regfile[rt_reg]
+            sys.stdout.write("st $r" + str(rt_reg) + " => mem(" + str(offset_val) + ")")
+            data_mem[offset_val] = regfile[rt_reg]
 
     elif (opcode == "3") or (opcode == "4"):
         rd_reg = hex2int(insn[3])
